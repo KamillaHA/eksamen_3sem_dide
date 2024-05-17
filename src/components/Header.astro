@@ -1,5 +1,33 @@
 ---
 ---
-<div>
-Header
+<div x-data="{ showmenu: false }" class="p-6 fixed w-full z-50 bg-gron500 text-">
+    <div id="navbar" class="flex flex-row justify-between items-center">
+        
+        <a href="/" class="shrink-0">
+            <img class="w-20 h-20 m-4" src="/" alt="logo"/>
+        </a>
+        
+        <nav id="desktopmenu" class="flex-1 ml-20">
+            <ul class="hidden lg:flex flex-row justify-center gap-6 pt-8">
+                <li class="text-hvid hover:border border-gul500"><a href="#sektion1">Kager</a></li>
+                <li class="text-hvid hover:border border-gul500"><a href="#sektion2">Besøg La Glace</a></li>
+                <li class="text-hvid hover:border border-gul500"><a href="#sektion3">Nyheder</a></li>
+                <li class="text-hvid hover:border border-gul500"><a href="#sektion4">Historien</a></li>
+                <li class="text-hvid hover:border border-gul500"><a href="#sektion5">Gaver</a></li>
+                <li class="text-hvid hover:border border-gul500"><a href="#sektion6">Foredrag og kurser</a></li>
+            </ul>
+        </nav>
+
+    <button  id="burgermenu" class="lg:hidden text-white mx-auto" x-on:click="showmenu = ! showmenu">Menu</button>
+</div>
+<nav id="mobilmenu" class="flex flex-col content-center list-none" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <ul >
+        <li class="text-hvid hover:text-gul700 text-center py-4"><a href="#sektion1">Kager</a></ul></li>
+        <li class="text-hvid hover:text-gul700 text-center py-4"><a href="#sektion2">Besøg La Glace</a></li>
+        <li class="text-hvid hover:text-gul700 text-center py-4"><a href="#sektion3">Nyheder</a></li>
+        <li class="text-hvid hover:text-gul700 text-center py-4"><a href="#sektion4">Historien</a></li>
+        <li class="text-hvid hover:text-gul700 text-center py-4"><a href="#sektion5">Gaver</a></li>
+        <li class="text-hvid hover:text-gul700 text-center py-4"><a href="#sektion6">Foredrag og kurser</a></li>
+    </ul>
+</nav>
 </div>
