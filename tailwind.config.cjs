@@ -104,5 +104,7 @@ module.exports = {
       //     herounit: "url('/src/assets/images/herounit.svg')",
       //   },
     },
+
+    // brug altid en gap på 100px = XXL spacing mellem sektioner Desktop, og 60 px på mobil
   },
 };
