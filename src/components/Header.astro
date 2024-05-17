@@ -1,33 +1,60 @@
 ---
+import Button from "./Button.astro"
+import { Image } from "astro:assets";
+import LogoDesktop from "../assets/images/logo-desktop.svg";
+import LogoMobil from "../assets/images/logo-mobil.svg";
 ---
 <div x-data="{ showmenu: false }" class="p-6 fixed w-full z-50 bg-gron500 text-">
     <div id="navbar" class="flex flex-row justify-between items-center">
-        
-        <a href="/" class="shrink-0">
-            <img class="w-20 h-20 m-4" src="/" alt="logo"/>
+
+        <a href="/" class="lg:hidden shrink-0 ">
+            <Image src={LogoMobil} alt="Logo Mobil" class="block lg:hidden"/>
         </a>
-        
-        <nav id="desktopmenu" class="flex-1 ml-20">
-            <ul class="hidden lg:flex flex-row justify-center gap-6 pt-8">
-                <li class="text-hvid hover:border border-gul500"><a href="#sektion1">Kager</a></li>
-                <li class="text-hvid hover:border border-gul500"><a href="#sektion2">Besøg La Glace</a></li>
-                <li class="text-hvid hover:border border-gul500"><a href="#sektion3">Nyheder</a></li>
-                <li class="text-hvid hover:border border-gul500"><a href="#sektion4">Historien</a></li>
-                <li class="text-hvid hover:border border-gul500"><a href="#sektion5">Gaver</a></li>
-                <li class="text-hvid hover:border border-gul500"><a href="#sektion6">Foredrag og kurser</a></li>
-            </ul>
+
+        <nav id="leftmenu" class="flex-1 flex justify-end mr-8 mb-8">
+            <div class="border-b-2 border-gul500 p-xs hidden lg:block">
+                <ul class="hidden lg:flex flex-row justify-center gap-6 pt-8">
+                    <Button variant="navbar">Kager</Button>
+                    <Button variant="navbar">Besøg La Glace</Button>
+                    <Button variant="navbar">Nyheder</Button>
+                </ul>
+            </div>
         </nav>
 
-    <button  id="burgermenu" class="lg:hidden text-white mx-auto" x-on:click="showmenu = ! showmenu">Menu</button>
+        <a href="/" class="hidden lg:block shrink-0 mx-8">
+            <Image src={LogoDesktop} alt="Logo Desktop" class="hidden lg:block"/>
+        </a>
+
+        <nav id="rightmenu" class="flex-1 flex justify-start ml-8 mb-8">
+            <div class="border-b-2 border-gul500 p-xs hidden lg:block">
+                <ul class="hidden lg:flex flex-row justify-center gap-6 pt-8">
+                    <Button variant="navbar">Historien</Button>
+                    <Button variant="navbar">Gaver</Button>
+                    <Button variant="navbar">Foredrag og kurser</Button>
+                </ul>
+            </div>
+        </nav>
+
+    <button id="burgermenu" class="lg:hidden text-gul300 mx-auto" x-on:click="showmenu = ! showmenu">
+        <!-- Three bars icon -->
+        <svg x-show="!showmenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-12 h-12">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <!-- Cross icon -->
+        <svg x-show="showmenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-12 h-12">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
 </div>
+
 <nav id="mobilmenu" class="flex flex-col content-center list-none" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
     <ul >
-        <li class="text-hvid hover:text-gul700 text-center py-4"><a href="#sektion1">Kager</a></ul></li>
-        <li class="text-hvid hover:text-gul700 text-center py-4"><a href="#sektion2">Besøg La Glace</a></li>
-        <li class="text-hvid hover:text-gul700 text-center py-4"><a href="#sektion3">Nyheder</a></li>
-        <li class="text-hvid hover:text-gul700 text-center py-4"><a href="#sektion4">Historien</a></li>
-        <li class="text-hvid hover:text-gul700 text-center py-4"><a href="#sektion5">Gaver</a></li>
-        <li class="text-hvid hover:text-gul700 text-center py-4"><a href="#sektion6">Foredrag og kurser</a></li>
+        <li class="text-hvid hover:text-gul700 active:text-gul900 text-center py-4"><a href="#">Kager</a></ul></li>
+        <li class="text-hvid hover:text-gul700 active:text-gul900 text-center py-4"><a href="#">Besøg La Glace</a></li>
+        <li class="text-hvid hover:text-gul700 active:text-gul900 text-center py-4"><a href="">Nyheder</a></li>
+        <li class="text-hvid hover:text-gul700 active:text-gul900 text-center py-4"><a href="">Historien</a></li>
+        <li class="text-hvid hover:text-gul700 active:text-gul900 text-center py-4"><a href="">Gaver</a></li>
+        <li class="text-hvid hover:text-gul700  active:text-gul900 text-center py-4"><a href="">Foredrag og kurser</a></li>
     </ul>
 </nav>
 </div>
