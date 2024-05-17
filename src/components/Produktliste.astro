@@ -10,18 +10,20 @@ import Cardtest from "../assets/images/test-card.png";
   <Image
     src={Produkter}
     alt="Baggrundsbillede til produkter"
-    class="md:w-full h-full"
+    class="md:w-full md:h-full"
   />
 
   <div
-    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+    class="md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center"
   >
     <p
-      class="md:text-serifh1 text-gron500 mb-2 underline decoration-solid decoration-2 underline-offset-big decoration-gul500 font-serif"
+      class="text-mserifh1 md:text-serifh1 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
     >
       Lagkager
     </p>
-    <p class="md:text-normalh3 text-neu500 font-normal">
+    <p
+      class="text-mnormalh4 md:text-normalh3 text-neu500 font-normal mx-mxxl md:mx-0"
+    >
       Alle lagkager består af minimum én mousse med diverse lækre ingredienser,
       oven på en luftig bund der fremhæver de forskellige smage. Øverst ligger
       der nøje udvalgt pynt, der løfter den enkelte kage til et højere niveau.
@@ -29,7 +31,7 @@ import Cardtest from "../assets/images/test-card.png";
   </div>
 </section>
 <div
-  class="mt-xxl mx-xxxl grid grid-cols-3 grid-rows-10 gap-xl items-center place-items-center"
+  class="mt-mxl md:mt-xxl mx-mxxl md:mx-xxxl md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center"
 >
   <Card
     imageSrc={Cardtest}

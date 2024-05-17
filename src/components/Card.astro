@@ -15,7 +15,9 @@ const { imageSrc, imageAlt, title, description, buttonText, buttonVariant } =
   Astro.props;
 ---
 
-<div class="max-w-xs overflow-hidden shadow-skygge m-auto scale-100">
+<div
+  class="my-mxl md:my-0 max-w-xs overflow-hidden shadow-skygge m-auto scale-100"
+>
   <Image src={imageSrc} alt={imageAlt} class="md:w-full" />
   <div class="px-6 py-4">
     <div
