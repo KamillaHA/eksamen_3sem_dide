@@ -40,8 +40,8 @@ module.exports = {
         gul900: "#584927", //farve til clicked primary button & dark border
       },
       fontFamily: {
-        serif: ["Playfair Disiplay"],
-        normal: ["Lato", "sans-serif"],
+        serif: ["Playfair Disiplay"], //Font til special
+        normal: ["Lato", "sans-serif"], //Font til brødtekst og mindre headere
       },
       fontSize: {
         //Desktop
@@ -86,6 +86,7 @@ module.exports = {
         l: "30px", //Large gap
         xl: "60px", //X-large gap
         xxl: "100px", //Xx-large gap
+        xxxl: "140px", //3-xlarge gap
 
         //Mobil
         ms: "5px", //Small gap MOBIL
@@ -100,9 +101,23 @@ module.exports = {
         l: "12px", //Large borderradius
         xl: "16px", //X-large borderradius
       },
+      boxShadow: {
+        skygge: "0 10px 30px rgba(77, 70, 69, 0.10)", //Skygge på cards
+      },
+      textUnderlineOffset: {
+        off: "12px", // Margin mellem tekst og guld-linje
+        big: "24px", //Margin mellem tekst og guld-linje header
+      },
       //   backgroundImage: {
       //     herounit: "url('/src/assets/images/herounit.svg')",
       //   },
     },
   },
 };
+
+// Eksempel på tekst-overskrift med grøn farve og guld underlinje
+/* <div
+class="text-serifh3 text-gron500 mb-2 underline decoration-solid decoration-2 underline-offset-off decoration-gul500 font-serif"
+>
+Othello Lagkage
+</div> */

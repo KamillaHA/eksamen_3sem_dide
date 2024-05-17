@@ -1,5 +1,177 @@
 ---
 import Button from "../components/Button.astro";
+import Card from "./Card.astro";
+import Produkter from "../assets/images/test-produkt.png";
+import { Image } from "astro:assets";
+import Cardtest from "../assets/images/test-card.png";
 ---
 
-<Button variant="navbar">Skriv tekst her</Button>
+<section class="relative">
+  <Image
+    src={Produkter}
+    alt="Baggrundsbillede til produkter"
+    class="md:w-full h-full"
+  />
+
+  <div
+    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+  >
+    <p
+      class="md:text-serifh1 text-gron500 mb-2 underline decoration-solid decoration-2 underline-offset-big decoration-gul500 font-serif"
+    >
+      Lagkager
+    </p>
+    <p class="md:text-normalh3 text-neu500 font-normal">
+      Alle lagkager består af minimum én mousse med diverse lækre ingredienser,
+      oven på en luftig bund der fremhæver de forskellige smage. Øverst ligger
+      der nøje udvalgt pynt, der løfter den enkelte kage til et højere niveau.
+    </p>
+  </div>
+</section>
+<div
+  class="mt-xxl mx-xxxl grid grid-cols-3 grid-rows-10 gap-xl items-center place-items-center"
+>
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Othello Lagkage"
+    description="Othellolagkagen består af flødecreme, makronbund, lagkagkagebunde, chokoladeglasur og marcipankant."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Sportskage"
+    description="Sportskagen består af knust nougat, pisket flødeskum, en lækker makronbund og karamelliserede vandbakkelser."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Valnødde Lagkage"
+    description="Valnøddelagkagen består af knuste valnødder i flødeskum, mandelbunde og mokkaglasur. Pyntet med valnødder."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Forårskage"
+    description="Forårskagen består af en luftig hindbærfromage, smagsfuld chokoladetrøffel, hindbærpuré og ristet mandelbund."
+  />
+
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Efterårskage"
+    description="Efterårskagen består af chokoladetrøffel, chokoladebunde og er overtrukket med smørchokolade."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Volmer Sørensen"
+    description="Volmerkagen består af blød nougat i flødeskum, makronbund, abrikosmarmelade, vanillecreme. Pyntet med marcipankant."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Georginekagen"
+    description="Georginelagkagen består af flødecreme, makronbund, syltetøj og pyntet med en masse flødeskum."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Karen Blixen"
+    description="Karen Blixen kagen består af kaffefromage, mokkatrøffel med ristede hasselnødder, chokoladebund."
+  />
+
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="HC Hat"
+    description="HC Hat kagen består af en karamelmousse med citronkaramelganache på chokolade bisquitbunde."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Æblekage"
+    description="Æblekagen består af skrællede og kogte æbler, makronbund, vanillecreme. Pyntet med flødeskum og ristede nødder."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Appelsinkage"
+    description="Appelsinkagen består af appelsinflødecreme, makronbund og appelsinglasur. Pyntet med orange chokolade og marcipankant."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="H.C. Andersen"
+    description="H.C. Andersens kage består af en klassisk citronfromage og en moderne hindbærcreme lagt på en nøddebund."
+  />
+
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Schwartzwalder"
+    description="Kirsebærlikør i flødeskum, kirsebærsyltetøj, chokoladetrøffel, chokoladebunde. Pyntet med revet chokolade og røde bær."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Lucky You"
+    description="En bund af græskarmarengs, mascapone, græskarkerner samt en chokolademousse. Tilsat hindbær og chokoladeganache."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Sachertorte"
+    description="Chokoladebunde lagt sammen med rom, frisk abrikos og marcipan. Kagen er overtrukket med chokolade."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Det Gyldne Tårn"
+    description="Rabarberkompot, hvid chokolade, citroncreme på mandelbunde, citronmarengs og flamberet marcipankant."
+  />
+
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Blåbær Genskær"
+    description="Blåbærmousse, lakrids-chokolade trøffel, solbærgele, chokolademandelbund. Pyntet med blåbær og Fransk Makron."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Pineapple Pride"
+    description="Kagen består af mascarpone med vaniljemousse og en kerne af ananas. Bunden er lavet af mandelmarengs med mandler."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Werners"
+    description="Kagen er lavet med rabarber og vanille. Den er bagt på makronbund, med crumble og mandelflager."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="150 Års Kagen"
+    description="Kagen består af en lys bund med citron, blå birkes og vanilje, solbærgelé, mandler og en citronmousse med hvid chokolade."
+  />
+
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Sensommertærte"
+    description="Sensommertærten består af æblekompot, en vaniljecreme, marcipan og saftig mørdej. Pyntet med æblestykker."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Nøddebo"
+    description="Kagen består af hasselnødder og valnødder der er bagt i brun farin og smør for at give kagen en dybde og ristet smag."
+  />
+  <Card
+    imageSrc={Cardtest}
+    imageAlt="Et testbillede"
+    title="Rubinstein"
+    description="Kagen består af romfromage, makronbund, ribsgele. Pyntet med vandbakkelser dyppet i chokolade og flødeskum."
+  />
+</div>
