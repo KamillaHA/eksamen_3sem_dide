@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+import Cardtest from "../assets/images/test-card.png";
+import Formular from "./Formular.astro";
+---
+
+<section class="bg-beige md:py-xxl">
+  <div
+    class="grid grid-rows-2 md:grid-rows-none row-start-2 md:grid-cols-5 place-items-center md:gap-xxl mx-mxl md:mx-xxl"
+  >
+    <div
+      class="grid grid-cols-2 grid-rows-3 md:col-span-3 md:col-start-1 md:grid-cols-3 md:grid-rows-2 gap-m mx-mxl md:mx-none"
+    >
+      <Image
+        src={Cardtest}
+        alt="testbillede"
+        class="md:w-full h-full col-start-1 col-span-2 row-start-1 row-span-2 md:col-span-2"
+      />
+      <Image
+        src={Cardtest}
+        alt="testbillede"
+        class="md:w-full h-full col-start-1 md:col-start-3 row-start-3 md:row-start-1"
+      />
+      <Image
+        src={Cardtest}
+        alt="testbillede"
+        class="md:w-full h-full col-start-2 md:col-start-3 row-start-3 md:row-start-2"
+      />
+    </div>
+    <div
+      class="mt-l md:mt-none grid grid-rows-2 md:grid-rows-none row-start-1 md:col-start-4 md:col-span-2"
+    >
+      <h1
+        class="text-mserifh1 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-center md:text-left"
+      >
+        Othello Lagkage
+      </h1>
+      <p class="my-mm md:my-m">
+        Othellolagkagen er opkaldt efter Shakespeares teaterproduktion ved samme
+        navn.
+      </p>
+      <p class="my-mm md:my-m">
+        Othellolagkagen består af flødecreme, makronbund, lagkagkagebunde,
+        chokoladeglasur og marcipankant.
+      </p><p class="my-mm md:my-m">
+        Kagen er pyntet med smørcreme og pistacienødder.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-ml md:py-xxl">
+  <div
+    class="grid grid-rows-2 row-start-2 md:row-start-none md:grid-cols-7 md:grid-rows-5 place-items-center md:mx-xxxl md:gap-m"
+  >
+    <div class="col-start-1 col-span-3 mx-mxl md:mx-none">
+      <h4 class="text-normalh4 text-gron500 row-start-1 my-s">Pris:</h4>
+      <p class="row-start-2 mb-l">
+        72,- kr - 1 person <br />720,- kr - 10 personer <br />864,- kr - 12
+        personer <br />1.008,- kr - 14 personer
+      </p>
+      <h4 class="text-normalh4 text-gron500 row-start-3 my-s">Tillæg:</h4>
+      <p class="row-start-4 mb-m">
+        150,- kr - marcipanskilt<br />180,- kr - marcipanhjerte i farve<br
+        />200,- kr - logo<br /><br />
+
+         Alle skilte er op til 20 tegn pr. skilt
+      </p>
+      <h4 class="text-normalh4 text-gron500 row-start-5 mt-xl">
+        Du er velkommen til at kontakte os, hvis du har uddybende spørgsmål.
+      </h4>
+    </div>
+
+    <div
+      class="mx-mm w-full md:mx-none row-start-1 md:row-start-none md:col-start-4 md:col-span-4"
+    >
+      <Formular />
+    </div>
+  </div>
+</section>

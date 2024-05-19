@@ -74,10 +74,12 @@ module.exports = {
         xs: "12px", //X-small padding
         s: "20px", //Small padding
         m: "40px", //Medium padding
+        l: "60px",
 
         //Mobil
         ms: "10px", //Small padding
         mm: "20px", //Medium padding
+        ml: "30px",
       },
       spacing: {
         //Desktop
@@ -106,7 +108,7 @@ module.exports = {
       },
       textUnderlineOffset: {
         off: "12px", // Margin mellem tekst og guld-linje
-        big: "24px", //Margin mellem tekst og guld-linje header
+        big: "24xxlpx", //Margin mellem tekst og guld-linje header
       },
       //   backgroundImage: {
       //     herounit: "url('/src/assets/images/herounit.svg')",
