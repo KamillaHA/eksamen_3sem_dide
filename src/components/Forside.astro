@@ -1,0 +1,102 @@
+---
+import { Image } from "astro:assets";
+import Produkter from "../assets/images/test-produkt.png";
+import Cardtest from "../assets/images/test-card.png";
+import Button from "./Button.astro";
+import Karussel from "./Karussel.astro";
+---
+
+<section class="relative text-center mb-mxl">
+  <Image
+    src={Produkter}
+    alt="Baggrundsbillede til produkter"
+    class="md:w-full md:h-full"
+  />
+
+  <div
+    class="md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2"
+  >
+    <p
+      class="text-mserifh1 md:text-serifh1 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
+    >
+      Velkommen til Conditori La Glace
+    </p>
+    <p
+      class="text-mnormalh4 md:text-normalh3 text-neu500 font-normal mx-mxxl md:mx-0 mb-mxl md:mb-none"
+    >
+      Det vil glæde os, at byde Dem velkommen i de smukke gamle lokaler, hvor De
+      kan opleve ægte kagekunst
+    </p>
+    <a href="/liste/"><Button variant="primary">Se kager</Button></a>
+  </div>
+</section>
+
+<section class="relative text-center my-mxl">
+  <p
+    class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
+  >
+    Stort udvalg af kager
+  </p>
+  <p
+    class="text-pbody text-neu500 font-normal mx-mxxl md:mx-0 mb-mxl md:mb-none"
+  >
+    Vi har kager til hver en smag og alle anledninger, du kan se et udpluk her
+    under eller klikke videre for at se alle kategorier.
+  </p>
+  <a href="/liste/"><Button variant="primary">Se vores sortiment her</Button></a
+  >
+
+  <Karussel />
+</section>
+
+<section class="relative bg-beige text-center py-ml">
+  <p
+    class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
+  >
+    En særlig anledning?
+  </p>
+  <p
+    class="text-pbody text-neu500 font-normal mx-mxxl md:mx-0 mb-mxl md:mb-none"
+  >
+    Kontakt os for at få mere information om vores speciel-lavede kager, eller
+    kig i vores sortiment for inspiration.
+  </p>
+  <a href="/liste/"><Button variant="secondary">Få inspiration</Button></a>
+
+  <div class="mx-mxl md:mx-none mt-mxl">
+    <Image src={Cardtest} alt="testbillede" class="md:w-full h-full my-mxl" />
+    <Image src={Cardtest} alt="testbillede" class="md:w-full h-full my-mxl" />
+    <Image src={Cardtest} alt="testbillede" class="md:w-full h-full my-mxl" />
+  </div>
+</section>
+
+<section class="relative text-center py-ml">
+  <p
+    class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
+  >
+    Vores historie
+  </p>
+  <div class="gap-m mx-mxl md:mx-none grid grid-cols-5 grid-rows-3">
+    <Image
+      src={Cardtest}
+      alt="testbillede"
+      class="md:w-full h-full col-start-1 col-span-3 row-start-1"
+    />
+    <Image
+      src={Cardtest}
+      alt="testbillede"
+      class="md:w-full h-full col-start-3 col-span-3 row-start-2"
+    />
+    <Image
+      src={Cardtest}
+      alt="testbillede"
+      class="md:w-full h-full col-start-1 col-span-3 row-start-3"
+    />
+  </div>
+  <p
+    class="text-pbody text-neu500 font-normal mx-mxxl md:mx-0 mb-mxl md:mb-none mt-mxl md:mt-none"
+  >
+    Læs meget mere om historien bag La Glace og kagerne her.
+  </p>
+  <a href="/liste/"><Button variant="secondary">Læs om La Glace</Button></a>
+</section>
