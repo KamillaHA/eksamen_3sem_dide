@@ -75,6 +75,8 @@ module.exports = {
         s: "20px", //Small padding
         m: "40px", //Medium padding
         l: "60px",
+        xl: "100px",
+        xxl: "200px",
 
         //Mobil
         ms: "10px", //Small padding
