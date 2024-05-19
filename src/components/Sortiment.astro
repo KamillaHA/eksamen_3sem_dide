@@ -5,4 +5,45 @@ import bryllupskager from "../assets/images/sortiment/bryllupskager.webp";
 ---
 
 
-<Button/>
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Produktliste from "../components/Produktliste.astro";
+import section1_1 from '../assets/section1_1.jpg';
+---
+
+
+<section id="Sortiment">
+  <section class="px-8 py-20 mt-20 grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto parallaxcontainer" id="section3">
+    <div class="grid gap-8">
+      <h2 class="text-sky-950 font-bold text-3x text-center animate__animated animate__pulse animate__infinite infinite">
+        Hvad er plastikforurening?
+      </h2>
+      <article>
+        <p class="text-sky-950 text-lg text-center font-bold">
+          Siden 1950’erne har vi produceret mere end 9 milliarder ton plastik.
+          Heraf er størstedelen blevet brugt til engangsemballager og -produkter
+          med kort levetid og lav markedsværdi
+        </p>
+      </article>
+    </div>
+    <div class="self-center">
+      <img src={ bryllupskager } alt="billede1" class="inline section1_1" />
+    </div>
+  </section>
+</section>
+
+<section class="relative py-16  bg-beige">
+  <div class="relative p-[10px] md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center">
+    <p class="text-mserifh1 md:text-serifh1 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif">
+      Lagkager
+    </p>
+    <p class="text-mnormalh4 md:text-normalh3 text-neu500 font-normal mx-mxxl md:mx-0">
+      Alle lagkager består af minimum én mousse med diverse lækre ingredienser,
+      oven på en luftig bund der fremhæver de forskellige smage. Øverst ligger
+      der nøje udvalgt pynt, der løfter den enkelte kage til et højere niveau.
+    </p>
+  </div>
+</section>
+
+
+
