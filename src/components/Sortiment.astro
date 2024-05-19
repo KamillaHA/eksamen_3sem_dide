@@ -1,17 +1,24 @@
 ---
 import { Image } from "astro:assets";
 import Button from "./Button.astro";
-import bryllupskager from "../assets/images/sortiment/bryllupskager.webp";
 import type { Code } from "astro:components";
-import kage1 from "../assets/illustrationer/kage1.svg"
-import kaffe from "../assets/illustrationer/kaffe.svg"
+import Kaffe from "../assets/illustrationer/Kaffe.svg";
+import Kage2 from "../assets/illustrationer/Kage2.svg";
+import bryllupskager from "../assets/images/sortiment/bryllupskager.webp";
+import desmåfornøjelser from "../assets/images/sortiment/desmåfornøjelser.webp";
+import festkager from "../assets/images/sortiment/festkager.webp";
+import isanretninger from "../assets/images/sortiment/isanretninger.webp";
+import kransekager from "../assets/images/sortiment/kransekager.webp";
+import lagkager from "../assets/images/sortiment/lagkager.webp";
+import visitkager from "../assets/images/sortiment/visitkager.webp";
+
 ---
 
 
 <section class="bg-beige w-full h-[604px] flex items-center justify-center">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center w-full max-w-screen-xl px-4">
     <div class="hidden md:flex justify-center">
-      <Image src={kage1} alt="kage" class="inline w-80" />
+      <Image src={Kage2} alt="kage" class="inline w-80" />
     </div>
     <div class="text-center">
       <p class="text-3xl md:text-5xl text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif">
@@ -23,10 +30,28 @@ import kaffe from "../assets/illustrationer/kaffe.svg"
       </p>
     </div>
     <div class="hidden md:flex justify-center">
-      <Image src={kaffe} alt="kaffe" class="inline w-80" />
+      <Image src={Kaffe} alt="kaffe" class="inline w-80" />
     </div>
   </div>
 </section>
+
+<section class="bg-white w-full py-16">
+  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
+    <div class="md:w-1/2 flex justify-center mb-6 md:mb-0">
+      <Image src={lagkager} alt="lagkage" class="h-64 w-64 object-cover" />
+    </div>
+    <div class="md:w-1/2 md:pl-8">
+      <h2 class="text-3xl md:text-5xl text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif">Lagkager</h2>
+      <p class="text-lg text-neu500 mb-6">Alle lagkager består af minimum én mousse med diverse 
+lækre ingredienser, oven på en luftig bund der fremhæver 
+de forskellige smage.</p>
+<p class="text-lg text-neu500 mb-6">Øverst ligger der nøje udvalgt pynt, der løfter den enkelte 
+kage til et højere niveau.</p>
+      <button class="bg-gron500 text-white font-bold py-2 px-6 rounded hover:bg-gron600 transition duration-300">Knap</button>
+    </div>
+  </div>
+</section>
+
 
 
 
