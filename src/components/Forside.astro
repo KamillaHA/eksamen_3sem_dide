@@ -2,39 +2,35 @@
 import { Image } from "astro:assets";
 import Button from "./Button.astro";
 import Karussel from "./Karussel.astro";
-import bryllupskage from "../assets/images/frontpage/bryllypskage.webp"
-import karussel1 from "../assets/images/frontpage/frontpage carousel_1.webp"
-import karussel2 from "../assets/images/frontpage/frontpage carousel_2.webp"
-import karussel3 from "../assets/images/frontpage/frontpage carousel_3.webp"
-import karussel4 from "../assets/images/frontpage/frontpage carousel_4.webp"
-import karussel5 from "../assets/images/frontpage/frontpage carousel_5.webp"
-import hero from "../assets/images/frontpage/hero_1.webp"
-import kransekage from "../assets/images/frontpage/kransekage.webp"
-import specielkage from "../assets/images/frontpage/specielkage.webp"
-import voreshistorie from "../assets/images/frontpage/vores historie.webp"
-import mobilhero from "../assets/images/frontpage/mobil hero.webp"
-import the from "../assets/illustrationer/the.svg"
-import kage from "../assets/illustrationer/Kage1.svg"
-import kage2 from "../assets/illustrationer/kage2.svg"
+import bryllupskage from "../assets/images/frontpage/bryllypskage.webp";
+import hero from "../assets/images/frontpage/hero_1.webp";
+import kransekage from "../assets/images/frontpage/kransekage.webp";
+import specielkage from "../assets/images/frontpage/specielkage.webp";
+import voreshistorie from "../assets/images/frontpage/vores historie.webp";
+import mobilhero from "../assets/images/frontpage/mobil hero.webp";
+import the from "../assets/illustrationer/the.svg";
+import kage from "../assets/illustrationer/Kage1.svg";
+import kage2 from "../assets/illustrationer/kage2.svg";
 import "../styles/global.css";
 ---
 
-<section class="relative text-center mb-mxl md:mb-mxxl">
-  
-  <Image
+<section
+  class="relative text-center mb-mxl md:mb-mxxl bg-[url('/src/assets/images/frontpage/mobilhero.webp')] w-full h-full"
+>
+  <!-- <Image
     src={hero}
     alt="Baggrundsbillede til produkter"
-    class="md:w-full md:h-full md:block hidden "
+    class="md:w-full md:h-full md:block hidden"
   />
 
-   <Image
+  <Image
     src={mobilhero}
     alt="Baggrundsbillede til produkter"
-    class="md:w-full md:h-full md:hidden block"
-  />
+    class="w-full h-full md:hidden block"
+  /> -->
 
   <div
-    class="md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:mb-mxxl"
+    class="absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:mb-mxxl"
   >
     <h1
       class="text-mserifh1 md:text-serifh1 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
@@ -51,7 +47,6 @@ import "../styles/global.css";
   </div>
 </section>
 
-
 <section class="relative text-center my-mxl md:my-xxl">
   <p
     class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
@@ -61,8 +56,9 @@ import "../styles/global.css";
   <p
     class="text-pbody text-neu500 font-normal mx-mxxl md:mx-0 mb-mxl md:mb-none mt-none md:mt-m"
   >
-    Vi har kager til hver en smag og alle anledninger, du kan se et udpluk her
-    under eller klikke videre for at se alle kategorier.
+    Vi tilbyder kager til hver en smag og alle anledninger. <br />Du er
+    velkomment til, at scrolle igennem et udpluk her under, eller klikke videre
+    for at se alle kategorier.
   </p>
   <a href="/kager/"><Button variant="primary">Se vores sortiment her</Button></a
   >
@@ -91,11 +87,7 @@ import "../styles/global.css";
   </div>
   <div class="md:col-start-4 md:col-span-3 md:row-start-1">
     <!-- Indsæt illustration -->
-       <Image
-      src={kage2}
-      alt="kage illustration"
-      class="md:w-full h-96 pr-40 "
-    />
+    <Image src={kage2} alt="kage illustration" class="md:w-full h-96 pr-40" />
   </div>
 
   <div
@@ -142,70 +134,72 @@ import "../styles/global.css";
     </p>
     <a href="/om/"><Button variant="secondary">Læs om La Glace</Button></a>
   </div>
-  <div class="md:col-start-2 md:row-start-2 ">
+  <div class="md:col-start-2 md:row-start-2">
     <div class="grid grid-cols-2 illustrationer">
-  <Image
-      src={kage}
-      alt="vores historie"
-      class="col-start-1 h-20 mt-28 ml-10 md:w-full md:h-40 md:mt-40 md:ml-20 animate-slide-top kage"
-    />
       <Image
-      src={the}
-      alt="vores historie"
-      class=" col-start-2 md:w-full md:h-80 md:pt-0 md:pr-0 h-25 pt-14 pr-20 kaffe"
-    />
+        src={kage}
+        alt="vores historie"
+        class="col-start-1 h-20 mt-28 ml-10 md:w-full md:h-40 md:mt-40 md:ml-20 animate-slide-top kage"
+      />
+      <Image
+        src={the}
+        alt="vores historie"
+        class="col-start-2 md:w-full md:h-80 md:pt-0 md:pr-0 h-25 pt-14 pr-20 kaffe"
+      />
     </div>
-
   </div>
 </section>
 
 <script>
+  import { inView } from "motion";
 
-import { inView } from "motion";
+  const elementmedanimation1 = document.querySelector(".kage");
 
- 
+  inView(elementmedanimation1, () => {
+    elementmedanimation1.classList.add(
+      "animate__animated",
+      "animate__fadeInUp",
+      "animate__delay-0.5s"
+    );
+  });
 
-const elementmedanimation1 = document.querySelector(".kage");
+  const elementmedanimation2 = document.querySelector(".kaffe");
 
-inView(elementmedanimation1, () => {
+  inView(elementmedanimation2, () => {
+    elementmedanimation2.classList.add(
+      "animate__animated",
+      "animate__fadeInUp",
+      "animate__delay-0.5s"
+    );
+  });
 
-elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
+  const bryllupskage = document.querySelector(".bryllupskage");
 
-}); 
+  inView(bryllupskage, () => {
+    bryllupskage.classList.add(
+      "animate__animated",
+      "animate__fadeIn",
+      "animate__delay-0.5s"
+    );
+  });
 
- 
+  const kransekage = document.querySelector(".kransekage");
 
-const elementmedanimation2 = document.querySelector(".kaffe");
+  inView(kransekage, () => {
+    kransekage.classList.add(
+      "animate__animated",
+      "animate__fadeIn",
+      "animate__delay-0.5s"
+    );
+  });
 
-inView(elementmedanimation2, () => {
+  const specielkage = document.querySelector(".specielkage");
 
-elementmedanimation2.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
-
-}); 
-
-const bryllupskage = document.querySelector(".bryllupskage");
-
-inView(bryllupskage, () => {
-
-bryllupskage.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
-
-}); 
-
-const kransekage = document.querySelector(".kransekage");
-
-inView(kransekage, () => {
-
-kransekage.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
-
-}); 
-
-const specielkage = document.querySelector(".specielkage");
-
-inView(specielkage, () => {
-
-specielkage.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
-
-}); 
-
-
+  inView(specielkage, () => {
+    specielkage.classList.add(
+      "animate__animated",
+      "animate__fadeIn",
+      "animate__delay-0.5s"
+    );
+  });
 </script>
