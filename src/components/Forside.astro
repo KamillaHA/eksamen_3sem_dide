@@ -12,16 +12,25 @@ import hero from "../assets/images/frontpage/hero_1.webp"
 import kransekage from "../assets/images/frontpage/kransekage.webp"
 import specielkage from "../assets/images/frontpage/specielkage.webp"
 import voreshistorie from "../assets/images/frontpage/vores historie.webp"
+import mobilhero from "../assets/images/frontpage/mobil hero.webp"
 import the from "../assets/illustrationer/the.svg"
 import kage from "../assets/illustrationer/Kage1.svg"
+import kage2 from "../assets/illustrationer/kage2.svg"
 import "../styles/global.css";
 ---
 
 <section class="relative text-center mb-mxl md:mb-mxxl">
+  
   <Image
     src={hero}
     alt="Baggrundsbillede til produkter"
-    class="md:w-full md:h-full"
+    class="md:w-full md:h-full md:block hidden "
+  />
+
+   <Image
+    src={mobilhero}
+    alt="Baggrundsbillede til produkter"
+    class="md:w-full md:h-full md:hidden block"
   />
 
   <div
@@ -33,7 +42,7 @@ import "../styles/global.css";
       Velkommen til Conditori La Glace
     </h1>
     <p
-      class="text-mnormalh4 md:text-normalh3 text-neu500 font-normal mx-mxxl md:mx-0 mb-mxl md:mb-none"
+      class="text-mnormalh4 md:text-normalh4 text-neu500 font-normal mx-mxxl md:mx-0 mb-mxl md:mb-none"
     >
       Det vil glæde os, at byde Dem velkommen i de smukke gamle lokaler, hvor De
       kan opleve ægte kagekunst
@@ -82,11 +91,15 @@ import "../styles/global.css";
   </div>
   <div class="md:col-start-4 md:col-span-3 md:row-start-1">
     <!-- Indsæt illustration -->
-    <a href="/liste/"><Button variant="secondary">Få inspiration</Button></a>
+       <Image
+      src={kage2}
+      alt="kage illustration"
+      class="md:w-full h-96 pr-40 "
+    />
   </div>
 
   <div
-    class="mx-mxl mt-mxl md:mt-none md:col-span-6 md:row-start-2 md:grid md:grid-cols-3 md:gap-xl md:mx-xxl"
+    class="mx-mxl mt-mxl md:-mt-14 md:col-span-6 md:row-start-2 md:grid md:grid-cols-3 md:gap-xl md:mx-xxl"
   >
     <Image
       src={bryllupskage}
