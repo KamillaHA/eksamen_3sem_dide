@@ -12,6 +12,7 @@ import kransekager from "../assets/images/sortiment/kransekager.webp";
 import lagkager from "../assets/images/sortiment/lagkager.webp";
 import visitkager from "../assets/images/sortiment/visitkager.webp";
 import konditorkager from "../assets/images/sortiment/konditorkager.webp";
+import "../styles/global.css";
 ---
 
 <section
@@ -21,11 +22,11 @@ import konditorkager from "../assets/images/sortiment/konditorkager.webp";
     class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center w-full max-w-screen-xl px-4"
   >
     <div class="flex justify-center">
-      <Image src={Kage2} alt="kage" class="inline w-24 md:w-80 my-2" />
+      <Image src={Kage2} alt="kage" class="inline w-24 md:w-80 my-2 md:h-40 animate__animated animate__slideInDown" />
     </div>
     <div class="text-center">
       <h1
-        class="md:text-serifh1 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 text-mserifh1 md:underline-offset-8 decoration-gul500 font-serif"
+        class="md:text-serifh1 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 text-mserifh1 md:underline-offset-8 decoration-gul500 font-serif "
       >
         Sortiment
       </h1>
@@ -35,7 +36,7 @@ import konditorkager from "../assets/images/sortiment/konditorkager.webp";
       </p>
     </div>
     <div class="flex justify-center">
-      <Image src={Kaffe} alt="kaffe" class="inline w-24 md:w-80 my-2" />
+      <Image src={Kaffe} alt="kaffe" class="inline w-24 md:w-80 md:h-40 my-2 animate__animated animate__slideInDown " />
     </div>
   </div>
 </section>
@@ -45,7 +46,7 @@ import konditorkager from "../assets/images/sortiment/konditorkager.webp";
     <div
       class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-1"
     >
-      <Image src={lagkager} alt="lagkage" class="h-80 w-80 object-cover" />
+      <Image src={lagkager} alt="lagkage" class="h-80 w-80 object-cover  lagkagebillede" />
     </div>
     <div
       class="md:w-1/2 md:pl-8 md:order-2 text-center md:text-left md:mr-xxl mr-0"
@@ -78,7 +79,7 @@ import konditorkager from "../assets/images/sortiment/konditorkager.webp";
       <Image
         src={konditorkager}
         alt="konditorkgae"
-        class="h-80 w-80 object-cover"
+        class="h-80 w-80 object-cover konditorkager"
       />
     </div>
     <div
@@ -178,11 +179,13 @@ import konditorkager from "../assets/images/sortiment/konditorkager.webp";
     <div
       class="md:w-1/2 md:pl-8 md:order-2 text-center md:text-left md:mr-xxl mr-0"
     >
+    <div class="øvelse">
       <h2
         class="md:text-serifh2 text-mserifh2 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif"
       >
         Festkager
       </h2>
+    </div>
       <p class="text-pbody text-neu500 mb-6 text-center md:text-left">
         La Glace laver kager, der fornøjer både øje og gane. Og dét til alle
         aldre.
@@ -292,3 +295,48 @@ import konditorkager from "../assets/images/sortiment/konditorkager.webp";
     </div>
   </div>
 </section>
+
+
+
+
+<script>
+
+import { inView } from "motion";
+
+ 
+
+const lagkagebillede = document.querySelector(".lagkagebillede");
+
+inView(lagkagebillede, () => {
+
+lagkagebillede.classList.add("animate__animated", "animate__fadeInLeft", "animate__delay-0.5s");
+
+}); 
+
+ 
+
+const konditorkager = document.querySelector(".konditorkager");
+
+inView(konditorkager, () => {
+
+konditorkager.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
+
+}); 
+
+const billedefadein3 = document.querySelector(".billedefadein3");
+
+inView(billedefadein3, () => {
+
+billedefadein3.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-0.5s");
+
+}); 
+
+const bogbillede = document.querySelector(".bogbillede");
+
+inView(bogbillede, () => {
+
+bogbillede.classList.add("animate__animated", "animate__headShake", "animate__infinite" );
+
+}); 
+
+</script>
