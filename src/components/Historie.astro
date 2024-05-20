@@ -1,12 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import Produkter from "../assets/images/test-produkt.png";
-import Cardtest from "../assets/images/test-card.png";
+import Første from "../assets/images/om/1_generation.webp";
+import Anden from "../assets/images/om/2_generation.webp";
+import Tredje from "../assets/images/om/3_generation.webp";
+import Fjerde from "../assets/images/om/4_generation.webp";
+import Femte from "../assets/images/om/5_generation.webp";
+import Hero from "../assets/images/om/hero.webp";
+import Kaffe from "../assets/illustrationer/Kaffe.svg";
 ---
 
 <section class="relative">
   <Image
-    src={Produkter}
+    src={Hero}
     alt="Baggrundsbillede til produkter"
     class="md:w-full md:h-full"
   />
@@ -28,181 +33,220 @@ import Cardtest from "../assets/images/test-card.png";
   </div>
 </section>
 
-<div
-  class="grid grid-cols-2 mx-mxl md:mx-xxxl my-mxl md:my-xxl gap-xxl items-center"
->
-  <Image
-    src={Cardtest}
-    alt="testbillede"
-    class="md:w-full h-full col-start-1"
-  />
-  <p class="col-start-2 text-neu500 text-pbody font-normal">
-    Der er mange gode anekdoter forbundet med La Glace. <br /><br />Prominente
-    personligheder og andet godtfolk har i generationer bidraget med megen
-    kolorit. Men det er i bund og grund Conditoriets håndhævelse af den faglige
-    konditor-ekspertise der må have æren for, at vi stadig er at finde i
-    Skoubogade.<br /><br />Har De lyst til at læse om de mange ildsjæle, kage-
-    og kulturbærere, der igennem tiden har lagt sjælen i konditoriet, så scroll
-    videre.
-  </p>
-</div>
+<section class="bg-beige py-ms">
+  <div
+    class="grid grid-cols-2 mx-mxl md:mx-xxxl my-mxl md:my-xxl gap-xxl items-center"
+  >
+    <Image
+      src={Kaffe}
+      alt="Illustration af kop kaffe"
+      class="md:w-full h-60 col-start-1"
+    />
+    <p class="col-start-2 text-neu500 text-pbody font-normal">
+      Der er mange gode anekdoter forbundet med La Glace. <br /><br />Prominente
+      personligheder og andet godtfolk har i generationer bidraget med megen
+      kolorit. Men det er i bund og grund Conditoriets håndhævelse af den
+      faglige konditor-ekspertise der må have æren for, at vi stadig er at finde
+      i Skoubogade.<br /><br />Har De lyst til at læse om de mange ildsjæle,
+      kage- og kulturbærere, der igennem tiden har lagt sjælen i konditoriet, så
+      scroll videre.
+    </p>
+  </div>
+</section>
 <h2
-  class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-center"
+  class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-center mt-l"
 >
   Tidslinje
 </h2>
 
-<section
-  class="grid grid-cols-2 grid-rows-5 mx-mxl md:mx-xxxl my-mxl md:my-xxl gap-xl"
->
-  <div class="col-start-1 row-start-1">
-    <h3
-      class="text-mserifh3 md:serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left"
-    >
-      Første generation
-    </h3>
-    <p class="text-pbody text-neu500 font-normal">
-      Conditori La Glace blev grundlagt den 8. oktober 1870 i Skoubogade 3, og
-      på denne adresse har konditoriet stadig til huse.<br /><br />
+<ol class="relative border-l-2 dark:border-gul500 mx-mxl md:mx-xxxl">
+  <section class="grid grid-cols-2 grid-rows-5 md:mx-l my-mxl md:my-xxl gap-xl">
+    <div class="col-start-1 row-start-1">
+      <div
+        class="absolute w-3.5 h-3.5 rounded-full mt-0 -start-2 dark:border-gron500 dark:bg-gron500"
+      >
+      </div>
+      <h3
+        class="text-mserifh3 md:serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left -mt-4"
+      >
+        Første generation
+      </h3>
 
-       Nicolaus Henningsen blev født i 1839 i Slesvig og blev udlært konditor i 1859
-      efter en læretid i Flensborg. Han flyttede til København i 1860 og begyndte
-      at samle opskrifter, som stadig anvendes i konditoriet i dag. I 1870 åbnede
-      han sin forretning, "Henningsens Kælder", i København. <br /><br />
+      <p class="text-pbody text-neu500 font-normal">
+        Conditori La Glace blev grundlagt den 8. oktober 1870 i Skoubogade 3, og
+        på denne adresse har konditoriet stadig til huse.<br /><br />
 
-       Efter hans tidlige død i 1876 overtog hans kone, Anina Henningsen, forretningen.
-      Anina blev kendt for sin elegance og skønhed, og blev ofte set i silkekjoler
-      fra de fineste butikker. Hun giftede sig igen i 1881 med Thorvald Schrøder,
-      som videreudviklede forretningen og ændrede navnet til Conditori La Glace.
-      Under Thorvalds ledelse blev forretningen moderniseret og udvidet, bl.a. med
-      en ekstra butik og café indrettet i hvidt og guld. <br /><br />
+         Nicolaus Henningsen blev født i 1839 i Slesvig og blev udlært konditor i
+        1859 efter en læretid i Flensborg. Han flyttede til København i 1860 og begyndte
+        at samle opskrifter, som stadig anvendes i konditoriet i dag. I 1870 åbnede
+        han sin forretning, "Henningsens Kælder", i København. <br /><br />
 
-       Efter Thorvalds død i 1909 fortsatte Anina driften indtil 1915, hvorefter
-      svigersønnen og datteren overtog. Anina Henningsen døde selv i 1925.<br
-      /><br />
-    </p>
-  </div>
-  <div class="col-start-2 row-start-1">
-    <Image src={Cardtest} alt="testbillede" class="md:w-full h-full" />
-  </div>
-  <div class="col-start-1 row-start-2">
-    <h3
-      class="text-mserifh3 md:serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left"
-    >
-      Første generation
-    </h3>
-    <p class="text-pbody text-neu500 font-normal">
-      Conditori La Glace blev grundlagt den 8. oktober 1870 i Skoubogade 3, og
-      på denne adresse har konditoriet stadig til huse.<br /><br />
+         Efter hans tidlige død i 1876 overtog hans kone, Anina Henningsen, forretningen.
+        Anina blev kendt for sin elegance og skønhed, og blev ofte set i silkekjoler
+        fra de fineste butikker. Hun giftede sig igen i 1881 med Thorvald Schrøder,
+        som videreudviklede forretningen og ændrede navnet til Conditori La Glace.
+        Under Thorvalds ledelse blev forretningen moderniseret og udvidet, bl.a.
+        med en ekstra butik og café indrettet i hvidt og guld. <br /><br />
 
-       Nicolaus Henningsen blev født i 1839 i Slesvig og blev udlært konditor i 1859
-      efter en læretid i Flensborg. Han flyttede til København i 1860 og begyndte
-      at samle opskrifter, som stadig anvendes i konditoriet i dag. I 1870 åbnede
-      han sin forretning, "Henningsens Kælder", i København. <br /><br />
+         Efter Thorvalds død i 1909 fortsatte Anina driften indtil 1915, hvorefter
+        svigersønnen og datteren overtog. Anina Henningsen døde selv i 1925.<br
+        /><br />
+      </p>
+    </div>
+    <div class="col-start-2 row-start-1 my-xxl">
+      <Image
+        src={Første}
+        alt="Første generation"
+        class="md:w-full h-full p-s"
+      />
+    </div>
 
-       Efter hans tidlige død i 1876 overtog hans kone, Anina Henningsen, forretningen.
-      Anina blev kendt for sin elegance og skønhed, og blev ofte set i silkekjoler
-      fra de fineste butikker. Hun giftede sig igen i 1881 med Thorvald Schrøder,
-      som videreudviklede forretningen og ændrede navnet til Conditori La Glace.
-      Under Thorvalds ledelse blev forretningen moderniseret og udvidet, bl.a. med
-      en ekstra butik og café indrettet i hvidt og guld. <br /><br />
+    <div class="col-start-1 row-start-2">
+      <div
+        class="absolute w-3.5 h-3.5 rounded-full mt-4 -start-2 dark:border-gron500 dark:bg-gron500"
+      >
+      </div>
+      <h3
+        class="text-mserifh3 md:serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left"
+      >
+        Anden generation
+      </h3>
+      <p class="text-pbody text-neu500 font-normal">
+        Conditori La Glace blev grundlagt den 8. oktober 1870 i Skoubogade 3, og
+        på denne adresse har konditoriet stadig til huse.<br /><br />
 
-       Efter Thorvalds død i 1909 fortsatte Anina driften indtil 1915, hvorefter
-      svigersønnen og datteren overtog. Anina Henningsen døde selv i 1925.<br
-      /><br />
-    </p>
-  </div>
-  <div class="col-start-2 row-start-2">
-    <Image src={Cardtest} alt="testbillede" class="md:w-full h-full" />
-  </div>
-  <div class="col-start-1 row-start-3">
-    <h3
-      class="text-mserifh3 md:serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left"
-    >
-      Første generation
-    </h3>
-    <p class="text-pbody text-neu500 font-normal">
-      Conditori La Glace blev grundlagt den 8. oktober 1870 i Skoubogade 3, og
-      på denne adresse har konditoriet stadig til huse.<br /><br />
+         Nicolaus Henningsen blev født i 1839 i Slesvig og blev udlært konditor i
+        1859 efter en læretid i Flensborg. Han flyttede til København i 1860 og begyndte
+        at samle opskrifter, som stadig anvendes i konditoriet i dag. I 1870 åbnede
+        han sin forretning, "Henningsens Kælder", i København. <br /><br />
 
-       Nicolaus Henningsen blev født i 1839 i Slesvig og blev udlært konditor i 1859
-      efter en læretid i Flensborg. Han flyttede til København i 1860 og begyndte
-      at samle opskrifter, som stadig anvendes i konditoriet i dag. I 1870 åbnede
-      han sin forretning, "Henningsens Kælder", i København. <br /><br />
+         Efter hans tidlige død i 1876 overtog hans kone, Anina Henningsen, forretningen.
+        Anina blev kendt for sin elegance og skønhed, og blev ofte set i silkekjoler
+        fra de fineste butikker. Hun giftede sig igen i 1881 med Thorvald Schrøder,
+        som videreudviklede forretningen og ændrede navnet til Conditori La Glace.
+        Under Thorvalds ledelse blev forretningen moderniseret og udvidet, bl.a.
+        med en ekstra butik og café indrettet i hvidt og guld. <br /><br />
 
-       Efter hans tidlige død i 1876 overtog hans kone, Anina Henningsen, forretningen.
-      Anina blev kendt for sin elegance og skønhed, og blev ofte set i silkekjoler
-      fra de fineste butikker. Hun giftede sig igen i 1881 med Thorvald Schrøder,
-      som videreudviklede forretningen og ændrede navnet til Conditori La Glace.
-      Under Thorvalds ledelse blev forretningen moderniseret og udvidet, bl.a. med
-      en ekstra butik og café indrettet i hvidt og guld. <br /><br />
+         Efter Thorvalds død i 1909 fortsatte Anina driften indtil 1915, hvorefter
+        svigersønnen og datteren overtog. Anina Henningsen døde selv i 1925.<br
+        /><br />
+      </p>
+    </div>
+    <div class="col-start-2 row-start-2 my-xxl">
+      <Image src={Anden} alt="Anden generation" class="md:w-full h-full p-s" />
+    </div>
 
-       Efter Thorvalds død i 1909 fortsatte Anina driften indtil 1915, hvorefter
-      svigersønnen og datteren overtog. Anina Henningsen døde selv i 1925.<br
-      /><br />
-    </p>
-  </div>
-  <div class="col-start-2 row-start-3">
-    <Image src={Cardtest} alt="testbillede" class="md:w-full h-full" />
-  </div>
-  <div class="col-start-1 row-start-4">
-    <h3
-      class="text-mserifh3 md:serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left"
-    >
-      Første generation
-    </h3>
-    <p class="text-pbody text-neu500 font-normal">
-      Conditori La Glace blev grundlagt den 8. oktober 1870 i Skoubogade 3, og
-      på denne adresse har konditoriet stadig til huse.<br /><br />
+    <div class="col-start-1 row-start-3">
+      <div
+        class="absolute w-3.5 h-3.5 rounded-full mt-4 -start-2 dark:border-gron500 dark:bg-gron500"
+      >
+      </div>
+      <h3
+        class="text-mserifh3 md:serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left"
+      >
+        Tredje generation
+      </h3>
+      <p class="text-pbody text-neu500 font-normal">
+        Conditori La Glace blev grundlagt den 8. oktober 1870 i Skoubogade 3, og
+        på denne adresse har konditoriet stadig til huse.<br /><br />
 
-       Nicolaus Henningsen blev født i 1839 i Slesvig og blev udlært konditor i 1859
-      efter en læretid i Flensborg. Han flyttede til København i 1860 og begyndte
-      at samle opskrifter, som stadig anvendes i konditoriet i dag. I 1870 åbnede
-      han sin forretning, "Henningsens Kælder", i København. <br /><br />
+         Nicolaus Henningsen blev født i 1839 i Slesvig og blev udlært konditor i
+        1859 efter en læretid i Flensborg. Han flyttede til København i 1860 og begyndte
+        at samle opskrifter, som stadig anvendes i konditoriet i dag. I 1870 åbnede
+        han sin forretning, "Henningsens Kælder", i København. <br /><br />
 
-       Efter hans tidlige død i 1876 overtog hans kone, Anina Henningsen, forretningen.
-      Anina blev kendt for sin elegance og skønhed, og blev ofte set i silkekjoler
-      fra de fineste butikker. Hun giftede sig igen i 1881 med Thorvald Schrøder,
-      som videreudviklede forretningen og ændrede navnet til Conditori La Glace.
-      Under Thorvalds ledelse blev forretningen moderniseret og udvidet, bl.a. med
-      en ekstra butik og café indrettet i hvidt og guld. <br /><br />
+         Efter hans tidlige død i 1876 overtog hans kone, Anina Henningsen, forretningen.
+        Anina blev kendt for sin elegance og skønhed, og blev ofte set i silkekjoler
+        fra de fineste butikker. Hun giftede sig igen i 1881 med Thorvald Schrøder,
+        som videreudviklede forretningen og ændrede navnet til Conditori La Glace.
+        Under Thorvalds ledelse blev forretningen moderniseret og udvidet, bl.a.
+        med en ekstra butik og café indrettet i hvidt og guld. <br /><br />
 
-       Efter Thorvalds død i 1909 fortsatte Anina driften indtil 1915, hvorefter
-      svigersønnen og datteren overtog. Anina Henningsen døde selv i 1925.<br
-      /><br />
-    </p>
-  </div>
-  <div class="col-start-2 row-start-4">
-    <Image src={Cardtest} alt="testbillede" class="md:w-full h-full" />
-  </div>
-  <div class="col-start-1 row-start-5">
-    <h3
-      class="text-mserifh3 md:serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left"
-    >
-      Første generation
-    </h3>
-    <p class="text-pbody text-neu500 font-normal">
-      Conditori La Glace blev grundlagt den 8. oktober 1870 i Skoubogade 3, og
-      på denne adresse har konditoriet stadig til huse.<br /><br />
+         Efter Thorvalds død i 1909 fortsatte Anina driften indtil 1915, hvorefter
+        svigersønnen og datteren overtog. Anina Henningsen døde selv i 1925.<br
+        /><br />
+      </p>
+    </div>
+    <div class="col-start-2 row-start-3 my-xxl">
+      <Image
+        src={Tredje}
+        alt="Tredje generation"
+        class="md:w-full h-full p-s"
+      />
+    </div>
 
-       Nicolaus Henningsen blev født i 1839 i Slesvig og blev udlært konditor i 1859
-      efter en læretid i Flensborg. Han flyttede til København i 1860 og begyndte
-      at samle opskrifter, som stadig anvendes i konditoriet i dag. I 1870 åbnede
-      han sin forretning, "Henningsens Kælder", i København. <br /><br />
+    <div class="col-start-1 row-start-4">
+      <div
+        class="absolute w-3.5 h-3.5 rounded-full mt-4 -start-2 dark:border-gron500 dark:bg-gron500"
+      >
+      </div>
+      <h3
+        class="text-mserifh3 md:serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left"
+      >
+        Fjerde generation
+      </h3>
+      <p class="text-pbody text-neu500 font-normal">
+        Conditori La Glace blev grundlagt den 8. oktober 1870 i Skoubogade 3, og
+        på denne adresse har konditoriet stadig til huse.<br /><br />
 
-       Efter hans tidlige død i 1876 overtog hans kone, Anina Henningsen, forretningen.
-      Anina blev kendt for sin elegance og skønhed, og blev ofte set i silkekjoler
-      fra de fineste butikker. Hun giftede sig igen i 1881 med Thorvald Schrøder,
-      som videreudviklede forretningen og ændrede navnet til Conditori La Glace.
-      Under Thorvalds ledelse blev forretningen moderniseret og udvidet, bl.a. med
-      en ekstra butik og café indrettet i hvidt og guld. <br /><br />
+         Nicolaus Henningsen blev født i 1839 i Slesvig og blev udlært konditor i
+        1859 efter en læretid i Flensborg. Han flyttede til København i 1860 og begyndte
+        at samle opskrifter, som stadig anvendes i konditoriet i dag. I 1870 åbnede
+        han sin forretning, "Henningsens Kælder", i København. <br /><br />
 
-       Efter Thorvalds død i 1909 fortsatte Anina driften indtil 1915, hvorefter
-      svigersønnen og datteren overtog. Anina Henningsen døde selv i 1925.<br
-      /><br />
-    </p>
-  </div>
-  <div class="col-start-2 row-start-5">
-    <Image src={Cardtest} alt="testbillede" class="md:w-full h-full" />
-  </div>
-</section>
+         Efter hans tidlige død i 1876 overtog hans kone, Anina Henningsen, forretningen.
+        Anina blev kendt for sin elegance og skønhed, og blev ofte set i silkekjoler
+        fra de fineste butikker. Hun giftede sig igen i 1881 med Thorvald Schrøder,
+        som videreudviklede forretningen og ændrede navnet til Conditori La Glace.
+        Under Thorvalds ledelse blev forretningen moderniseret og udvidet, bl.a.
+        med en ekstra butik og café indrettet i hvidt og guld. <br /><br />
+
+         Efter Thorvalds død i 1909 fortsatte Anina driften indtil 1915, hvorefter
+        svigersønnen og datteren overtog. Anina Henningsen døde selv i 1925.<br
+        /><br />
+      </p>
+    </div>
+    <div class="col-start-2 row-start-4 my-xxl">
+      <Image
+        src={Fjerde}
+        alt="Fjerde generation"
+        class="md:w-full h-full p-s"
+      />
+    </div>
+
+    <div class="col-start-1 row-start-5">
+      <div
+        class="absolute w-3.5 h-3.5 rounded-full mt-4 -start-2 dark:border-gron500 dark:bg-gron500"
+      >
+      </div>
+      <h3
+        class="text-mserifh3 md:serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left"
+      >
+        Femte generation
+      </h3>
+      <p class="text-pbody text-neu500 font-normal">
+        Conditori La Glace blev grundlagt den 8. oktober 1870 i Skoubogade 3, og
+        på denne adresse har konditoriet stadig til huse.<br /><br />
+
+         Nicolaus Henningsen blev født i 1839 i Slesvig og blev udlært konditor i
+        1859 efter en læretid i Flensborg. Han flyttede til København i 1860 og begyndte
+        at samle opskrifter, som stadig anvendes i konditoriet i dag. I 1870 åbnede
+        han sin forretning, "Henningsens Kælder", i København. <br /><br />
+
+         Efter hans tidlige død i 1876 overtog hans kone, Anina Henningsen, forretningen.
+        Anina blev kendt for sin elegance og skønhed, og blev ofte set i silkekjoler
+        fra de fineste butikker. Hun giftede sig igen i 1881 med Thorvald Schrøder,
+        som videreudviklede forretningen og ændrede navnet til Conditori La Glace.
+        Under Thorvalds ledelse blev forretningen moderniseret og udvidet, bl.a.
+        med en ekstra butik og café indrettet i hvidt og guld. <br /><br />
+
+         Efter Thorvalds død i 1909 fortsatte Anina driften indtil 1915, hvorefter
+        svigersønnen og datteren overtog. Anina Henningsen døde selv i 1925.<br
+        /><br />
+      </p>
+    </div>
+    <div class="col-start-2 row-start-5 my-xxl">
+      <Image src={Femte} alt="Femte generation" class="md:w-full h-full p-s" />
+    </div>
+  </section>
+</ol>
