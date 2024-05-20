@@ -4,11 +4,23 @@ import Produkter from "../assets/images/test-produkt.png";
 import Cardtest from "../assets/images/test-card.png";
 import Button from "./Button.astro";
 import Karussel from "./Karussel.astro";
+import bryllupskage from "../assets/images/frontpage/bryllypskage.webp"
+import karussel1 from "../assets/images/frontpage/frontpage carousel_1.webp"
+import karussel2 from "../assets/images/frontpage/frontpage carousel_2.webp"
+import karussel3 from "../assets/images/frontpage/frontpage carousel_3.webp"
+import karussel4 from "../assets/images/frontpage/frontpage carousel_4.webp"
+import karussel5 from "../assets/images/frontpage/frontpage carousel_5.webp"
+import hero from "../assets/images/frontpage/hero_1.webp"
+import kransekage from "../assets/images/frontpage/kransekage.webp"
+import specielkage from "../assets/images/frontpage/specielkage.webp"
+import voreshistorie from "../assets/images/frontpage/vores historie.webp"
+import kaffe from "../assets/illustrationer/Kaffe.svg"
+import kage from "../assets/illustrationer/Kage1.svg"
 ---
 
 <section class="relative text-center mb-mxl md:mb-mxxl">
   <Image
-    src={Produkter}
+    src={hero}
     alt="Baggrundsbillede til produkter"
     class="md:w-full md:h-full"
   />
@@ -77,18 +89,18 @@ import Karussel from "./Karussel.astro";
     class="mx-mxl mt-mxl md:mt-none md:col-span-6 md:row-start-2 md:grid md:grid-cols-3 md:gap-xl md:mx-xxl"
   >
     <Image
-      src={Cardtest}
-      alt="testbillede"
+      src={bryllupskage}
+      alt="bryllupskage"
       class="md:w-full h-full my-mxl md:my-0"
     />
     <Image
-      src={Cardtest}
-      alt="testbillede"
+      src={specielkage}
+      alt="specielkage"
       class="md:w-full h-full my-mxl md:my-0"
     />
     <Image
-      src={Cardtest}
-      alt="testbillede"
+      src={kransekage}
+      alt="Kransekage"
       class="md:w-full h-full my-mxl md:my-0"
     />
   </div>
@@ -99,8 +111,8 @@ import Karussel from "./Karussel.astro";
 >
   <div class="gap-m mx-mxl md:mx-xxl md:col-start-1 md:row-span-2">
     <Image
-      src={Cardtest}
-      alt="testbillede"
+      src={voreshistorie}
+      alt="vores historie"
       class="md:w-full h-full col-start-1 col-span-3 row-start-1"
     />
   </div>
