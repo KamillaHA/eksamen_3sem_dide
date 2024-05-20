@@ -14,6 +14,7 @@ import specielkage from "../assets/images/frontpage/specielkage.webp"
 import voreshistorie from "../assets/images/frontpage/vores historie.webp"
 import the from "../assets/illustrationer/the.svg"
 import kage from "../assets/illustrationer/Kage1.svg"
+import "../styles/global.css";
 ---
 
 <section class="relative text-center mb-mxl md:mb-mxxl">
@@ -26,11 +27,11 @@ import kage from "../assets/illustrationer/Kage1.svg"
   <div
     class="md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:mb-mxxl"
   >
-    <p
+    <h1
       class="text-mserifh1 md:text-serifh1 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
     >
       Velkommen til Conditori La Glace
-    </p>
+    </h1>
     <p
       class="text-mnormalh4 md:text-normalh3 text-neu500 font-normal mx-mxxl md:mx-0 mb-mxl md:mb-none"
     >
@@ -40,6 +41,7 @@ import kage from "../assets/illustrationer/Kage1.svg"
     <a href="/liste/"><Button variant="primary">Se kager</Button></a>
   </div>
 </section>
+
 
 <section class="relative text-center my-mxl md:my-xxl">
   <p
@@ -89,17 +91,17 @@ import kage from "../assets/illustrationer/Kage1.svg"
     <Image
       src={bryllupskage}
       alt="bryllupskage"
-      class="md:w-full h-full my-mxl md:my-0"
+      class="md:w-full h-full my-mxl md:my-0 bryllupskage"
     />
     <Image
       src={specielkage}
       alt="specielkage"
-      class="md:w-full h-full my-mxl md:my-0"
+      class="md:w-full h-full my-mxl md:my-0 specielkage"
     />
     <Image
       src={kransekage}
       alt="Kransekage"
-      class="md:w-full h-full my-mxl md:my-0"
+      class="md:w-full h-full my-mxl md:my-0 kransekage"
     />
   </div>
 </section>
@@ -128,18 +130,69 @@ import kage from "../assets/illustrationer/Kage1.svg"
     <a href="/om/"><Button variant="secondary">Læs om La Glace</Button></a>
   </div>
   <div class="md:col-start-2 md:row-start-2 ">
-    <div class="grid grid-cols-2">
+    <div class="grid grid-cols-2 illustrationer">
   <Image
       src={kage}
       alt="vores historie"
-      class="col-start-1 h-20 mt-28 ml-10 md:w-full md:h-40 md:mt-40 md:ml-20   "
+      class="col-start-1 h-20 mt-28 ml-10 md:w-full md:h-40 md:mt-40 md:ml-20 animate-slide-top kage"
     />
       <Image
       src={the}
       alt="vores historie"
-      class=" col-start-2 md:w-full md:h-80 md:pt-0 md:pr-0 h-25 pt-14 pr-20"
+      class=" col-start-2 md:w-full md:h-80 md:pt-0 md:pr-0 h-25 pt-14 pr-20 kaffe"
     />
     </div>
 
   </div>
 </section>
+
+<script>
+
+import { inView } from "motion";
+
+ 
+
+const elementmedanimation1 = document.querySelector(".kage");
+
+inView(elementmedanimation1, () => {
+
+elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
+
+}); 
+
+ 
+
+const elementmedanimation2 = document.querySelector(".kaffe");
+
+inView(elementmedanimation2, () => {
+
+elementmedanimation2.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
+
+}); 
+
+const bryllupskage = document.querySelector(".bryllupskage");
+
+inView(bryllupskage, () => {
+
+bryllupskage.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
+
+}); 
+
+const kransekage = document.querySelector(".kransekage");
+
+inView(kransekage, () => {
+
+kransekage.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
+
+}); 
+
+const specielkage = document.querySelector(".specielkage");
+
+inView(specielkage, () => {
+
+specielkage.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
+
+}); 
+
+
+</script>
