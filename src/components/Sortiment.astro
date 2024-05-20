@@ -16,13 +16,13 @@ import konditorkager from "../assets/images/sortiment/konditorkager.webp";
 ---
 
 
-<section class="bg-beige w-full md:h-[604px] h-[400px] flex items-center justify-center "> <!-- Ændret højden på baggrunden -->
+<section class="bg-beige w-full md:h-[604px] h-[400px] flex items-center justify-center "> 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center w-full max-w-screen-xl px-4">
-    <div class="flex justify-center"> <!-- Fjernet 'hidden md:flex' -->
-      <Image src={Kage2} alt="kage" class="inline w-24 md:w-80 my-2" /> <!-- Tilføjet my-2 til at reducere paddingen -->
+    <div class="flex justify-center"> 
+      <Image src={Kage2} alt="kage" class="inline w-24 md:w-80 my-2" /> 
     </div>
     <div class="text-center serifh1">
-      <h1 class="serifh1 md:mserifh1 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif">
+      <h1 class="serifh1 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md: mserifh1 underline-offset-8 decoration-gul500 font-serif">
         Sortiment
       </h1>
       <p class="normalh3 md:text-2xl text-neu500 font-normal mx-auto max-w-3xl">
@@ -30,14 +30,11 @@ import konditorkager from "../assets/images/sortiment/konditorkager.webp";
         til diverse begivenheder og højtider.
       </p>
     </div>
-    <div class="flex justify-center"> <!-- Fjernet 'hidden md:flex' -->
-      <Image src={Kaffe} alt="kaffe" class="inline w-24 md:w-80 my-2" /> <!-- Tilføjet my-2 til at reducere paddingen -->
+    <div class="flex justify-center"> 
+      <Image src={Kaffe} alt="kaffe" class="inline w-24 md:w-80 my-2" /> 
     </div>
   </div>
 </section>
-
-
-
 
 
 
@@ -46,16 +43,16 @@ import konditorkager from "../assets/images/sortiment/konditorkager.webp";
 
 
 <section class="bg-white w-full py-16">
-  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
-    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-1"> <!-- Tilføjet items-center -->
+  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row ">
+    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-1"> 
       <Image src={lagkager} alt="lagkage" class="h-80 w-80 object-cover" />
     </div>
-    <div class="md:w-1/2 md:pl-8 md:order-2 flex flex-col items-center justify-center text-center"> <!-- Tilføjet flex-col, items-center og justify-center -->
-      <h2 class="serifh2 md: mserifh2 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif">Lagkager</h2>
-      <p class="pbodybig text-neu500 mb-6">Alle lagkager består af minimum én mousse med diverse 
+    <div class=" md:w-1/2 md:pl-8 md:order-2 flex flex-col md:items-center md:justify-center md:text-center"> 
+      <h2 class=" serifh2 md: mserifh2 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif">Lagkager</h2>
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">Alle lagkager består af minimum én mousse med diverse 
 lækre ingredienser, oven på en luftig bund der fremhæver 
 de forskellige smage.</p>
-      <p class="pbodybig text-neu500 mb-6">Øverst ligger der nøje udvalgt pynt, der løfter den enkelte 
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">Øverst ligger der nøje udvalgt pynt, der løfter den enkelte 
 kage til et højere niveau.</p>
       <Button variant="secondary">Se vores lagkager her</Button>
     </div>
@@ -64,14 +61,15 @@ kage til et højere niveau.</p>
 
 <section class="bg-beige w-full py-16">
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center ">
-    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2"> <!-- Tilføjet items-center -->
+    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2"> 
       <Image src={konditorkager} alt="konditorkgae" class="h-80 w-80 object-cover" />
     </div>
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 flex flex-col items-center justify-center text-center"> <!-- Tilføjet flex-col, items-center og justify-center -->
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 flex flex-col items-center justify-center text-center"> 
+   
       <h2 class="serifh2 md: mserifh2 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif">Konditerkager</h2>
-      <p class="pbodybig text-neu500 mb-6">Vores konditorkager er lavet med præcision og en sans for 
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">Vores konditorkager er lavet med præcision og en sans for 
 detaljen.</p>
-      <p class="pbodybig text-neu500 mb-6">Om du leder efter en tørkage, eller en kage der er fyldt
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">Om du leder efter en tørkage, eller en kage der er fyldt
 med lækker og nøje udvalgt mousse, så har vi et stort 
 udvalg der spænder bredt.</p>
       <Button variant="secondary">Se vores konditerkager her</Button>
@@ -85,16 +83,16 @@ udvalg der spænder bredt.</p>
 
 <section class="bg-white w-full py-16">
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
-    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-1"> <!-- Tilføjet items-center -->
+    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-1"> 
       <Image src={visitkager} alt="visitkager" class="h-80 w-80 object-cover" />
     </div>
-    <div class="md:w-1/2 md:pl-8 md:order-2 flex flex-col items-center justify-center text-center"> <!-- Tilføjet flex-col, items-center og justify-center -->
+    <div class="md:w-1/2 md:pl-8 md:order-2 flex flex-col items-center justify-center text-center"> 
       <h2 class="serifh2 md:mserifh2 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif">Visitkager</h2>
-      <p class="pbodybig text-neu500 mb-6">Ikke bare en ny kage, men mere et nyt begreb.
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">Ikke bare en ny kage, men mere et nyt begreb.
 Med Visitkagens indtog så har konditorstaben en daglig 
 lille legeplads, hvor kreativiteten lever og udfoldes i 
 rigelige mængder.</p>
-      <p class="pbodybig text-neu500 mb-6">Det helt særlige ved en Visitkage er derfor, man ved aldrig 
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">Det helt særlige ved en Visitkage er derfor, man ved aldrig 
 hvad man får, men man ved, at det altid er fremragende</p>
       <Button variant="secondary">Se vores visitkager her</Button>
     </div>
@@ -103,14 +101,14 @@ hvad man får, men man ved, at det altid er fremragende</p>
 
 <section class="bg-beige w-full py-16">
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
-    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2"> <!-- Tilføjet items-center -->
+    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2"> 
       <Image src={bryllupskager} alt="bryllupskager" class="h-80 w-80 object-cover" />
     </div>
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 flex flex-col items-center justify-center text-center"> <!-- Tilføjet flex-col, items-center og justify-center -->
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 flex flex-col items-center justify-center text-center"> 
       <h2 class="serifh2 md:mserifh2 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif">Bryllupskager</h2>
-      <p class="pbodybig text-neu500 mb-6">Hvert år har La Glace æren af at glæde mange brudepar og
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">Hvert år har La Glace æren af at glæde mange brudepar og
 deres gæster med en personlig og individuel bryllupskage.</p>
-      <p class="pbodybig text-neu500 mb-6">I samarbejde med vores kompetente kagedamer finder vi 
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">I samarbejde med vores kompetente kagedamer finder vi 
 ud af netop det indhold og udseende, der skal gøre Deres 
 kage perfekt.</p>
       <Button variant="secondary">Se vores bryllupskager her</Button>
@@ -121,13 +119,13 @@ kage perfekt.</p>
 
 <section class="bg-white w-full py-16">
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
-    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-1"> <!-- Tilføjet items-center -->
+    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-1"> 
       <Image src={festkager} alt="festkager" class="h-80 w-80 object-cover" />
     </div>
-    <div class="md:w-1/2 md:pl-8 md:order-2 flex flex-col items-center justify-center text-center"> <!-- Tilføjet flex-col, items-center og justify-center -->
+    <div class="md:w-1/2 md:pl-8 md:order-2 flex flex-col items-center justify-center text-center"> 
       <h2 class="serifh2 md:mserifh2 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif">Festkager</h2>
-      <p class="pbodybig text-neu500 mb-6">La Glace laver kager, der fornøjer både øje og gane. Og dét til alle aldre.</p>
-      <p class="pbodybig text-neu500 mb-6">Uanset om kagerne er til børn eller voksne, afstemmes de efter alder mht. pynt og smag. 
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">La Glace laver kager, der fornøjer både øje og gane. Og dét til alle aldre.</p>
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">Uanset om kagerne er til børn eller voksne, afstemmes de efter alder mht. pynt og smag. 
 Vi har mange års erfaring i, hvilke kager, der egner sig til hvilken størrelse.</p>
       <Button variant="secondary">Se vores festkager her</Button>
     </div>
@@ -135,16 +133,16 @@ Vi har mange års erfaring i, hvilke kager, der egner sig til hvilken størrelse
 </section>
 
 <section class="bg-beige w-full py-16">
-  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
-    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2"> <!-- Tilføjet items-center -->
+  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center ">
+    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2"> 
       <Image src={kransekager} alt="kransekager" class="h-80 w-80 object-cover" />
     </div>
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 flex flex-col items-center justify-center text-center"> <!-- Tilføjet flex-col, items-center og justify-center -->
+    <div class=" md:w-1/2 md:pr-8 md:pl-8 md:order-1 flex flex-col items-center md:items-start text-center"> 
       <h2 class="serifh2 md:mserifh2 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif">Kransekager</h2>
-      <p class="pbodybig text-neu500 mb-6">La Glace fremstiller kransekage af meget høj kvalitet som
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">La Glace fremstiller kransekage af meget høj kvalitet som
 består udelukkende af marcipan lavet af de bedste 
 mandler.</p>
-      <p class="pbodybig text-neu500 mb-6">ransekage er i øvrigt en typisk dansk specialitet, der 
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">ransekage er i øvrigt en typisk dansk specialitet, der 
 sjældent ses udenfor landets grænser</p>
       <Button variant="secondary">Se vores kransekager her</Button>
     </div>
@@ -155,28 +153,28 @@ sjældent ses udenfor landets grænser</p>
 
 
 <section class="bg-white w-full py-16">
-  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center text-center md:text-center"> <!-- Tilføjet text-center md:text-left -->
-    <div class="md:w-1/2 flex justify-center mb-6 md:mb-0 md:order-1"> <!-- Ændret her -->
-      <Image src={desmåfornøjelser} alt="de små fornøjelser" class="h-80 w-80 object-cover mx-auto md:mx-0" /> <!-- Tilføjet mx-auto md:mx-0 -->
+  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center text-center md:text-center"> 
+    <div class="md:w-1/2 flex justify-center mb-6 md:mb-0 md:order-1">
+      <Image src={desmåfornøjelser} alt="de små fornøjelser" class="h-80 w-80 object-cover mx-auto md:mx-0" /> 
     </div>
-    <div class="md:w-1/2 md:pl-8 md:order-2 flex flex-col items-center md:items-start text-center"> <!-- Tilføjet flex flex-col items-center md:items-start -->
+    <div class="md:w-1/2 md:pl-8 md:order-2 flex flex-col items-center md:items-start text-center"> 
       <h2 class="serifh2 md:mserifh2 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif text-center">De små fornøjelser</h2>
-      <p class="pbodybig text-neu500 mb-6">La Glace har naturligvis også lækker hjemmelavet konfekt at byde på.</p>
-      <p class="pbodybig text-neu500 mb-6">Alt fra den nyeste specialitet Franske Makroner til klassiske smørbagte småkager, fyldte chokolader og kransekagekonfekt.</p>
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">La Glace har naturligvis også lækker hjemmelavet konfekt at byde på.</p>
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">Alt fra den nyeste specialitet Franske Makroner til klassiske smørbagte småkager, fyldte chokolader og kransekagekonfekt.</p>
       <Button variant="secondary">Se vores små fornøjelser her</Button>
     </div>
   </div>
 </section>
 
 <section class="bg-beige w-full py-16">
-  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center text-center md:text-center"> <!-- Tilføjet text-center md:text-left -->
-    <div class="md:w-1/2 flex justify-center mb-6 md:mb-0 md:order-2"> <!-- Ændret her -->
-      <Image src={isanretninger} alt="bryllupskager" class="h-80 w-80 object-cover mx-auto md:mx-0" /> <!-- Tilføjet mx-auto md:mx-0 -->
+  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center text-center md:text-center"> 
+    <div class="md:w-1/2 flex justify-center mb-6 md:mb-0 md:order-2"> 
+      <Image src={isanretninger} alt="bryllupskager" class="h-80 w-80 object-cover mx-auto md:mx-0" /> 
     </div>
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 flex flex-col items-center md:items-start text-center"> <!-- Tilføjet flex flex-col items-center md:items-start -->
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 flex flex-col items-center md:items-start text-center"> 
       <h2 class="serifh2 md:mserifh2 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif">Isanretninger</h2>
-      <p class="pbodybig text-neu500 mb-6">La Glace har naturligvis også lækker hjemmelavet konfekt at byde på.</p>
-      <p class="pbodybig text-neu500 mb-6">Alt fra den nyeste specialitet Franske Makroner til klassiske smørbagte småkager, fyldte chokolader og kransekagekonfekt.</p>
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">La Glace har naturligvis også lækker hjemmelavet konfekt at byde på.</p>
+      <p class="pbodybig text-neu500 mb-6 text-center md:text-left">Alt fra den nyeste specialitet Franske Makroner til klassiske smørbagte småkager, fyldte chokolader og kransekagekonfekt.</p>
       <Button variant="secondary">Se vores isanretninger her</Button>
     </div>
   </div>
