@@ -26,7 +26,7 @@ import "../styles/global.css";
     </div>
     <div class="text-center">
       <h1
-        class="md:text-serifh1 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 text-mserifh1 md:underline-offset-8 decoration-gul500 font-serif "
+        class="md:text-serifh1 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 text-mserifh1 md:underline-offset-8 decoration-gul500 font-serif"
       >
         Sortiment
       </h1>
@@ -36,7 +36,7 @@ import "../styles/global.css";
       </p>
     </div>
     <div class="flex justify-center">
-      <Image src={Kaffe} alt="kaffe" class="inline w-24 md:w-80 md:h-40 my-2 animate__animated animate__slideInDown " />
+      <Image src={Kaffe} alt="kaffe" class="inline w-24 md:w-80 md:h-40 my-2 animate__animated animate__slideInDown" />
     </div>
   </div>
 </section>
@@ -46,7 +46,7 @@ import "../styles/global.css";
     <div
       class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-1"
     >
-      <Image src={lagkager} alt="lagkage" class="h-80 w-80 object-cover  lagkagebillede" />
+      <Image src={lagkager} alt="lagkage" class="h-80 w-80 object-cover md:h-40  " />
     </div>
     <div
       class="md:w-1/2 md:pl-8 md:order-2 text-center md:text-left md:mr-xxl mr-0"
@@ -79,7 +79,7 @@ import "../styles/global.css";
       <Image
         src={konditorkager}
         alt="konditorkgae"
-        class="h-80 w-80 object-cover konditorkager"
+        class="h-80 w-80 object-cover"
       />
     </div>
     <div
@@ -296,30 +296,27 @@ import "../styles/global.css";
   </div>
 </section>
 
-
-
-
 <script>
 
 import { inView } from "motion";
 
  
 
-const lagkagebillede = document.querySelector(".lagkagebillede");
+const billedefadein1 = document.querySelector(".billedefadein1");
 
-inView(lagkagebillede, () => {
+inView(billedefadein1, () => {
 
-lagkagebillede.classList.add("animate__animated", "animate__fadeInLeft", "animate__delay-0.5s");
+billedefadein1.classList.add("animate__animated", "animate__fadeInLeft", "animate__delay-0.5s");
 
 }); 
 
  
 
-const konditorkager = document.querySelector(".konditorkager");
+const billedefadein2 = document.querySelector(".billedefadein2");
 
-inView(konditorkager, () => {
+inView(billedefadein2, () => {
 
-konditorkager.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
+billedefadein2.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
 
 }); 
 

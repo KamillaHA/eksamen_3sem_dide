@@ -45,7 +45,7 @@ module.exports = {
       },
       fontSize: {
         //Desktop
-        serifh1: "5.313rem", //Bruges til serif header h1
+        serifh1: "4.8rem", //Bruges til serif header h1
         serifh2: "3rem", //Bruges til serif header h2
         serifh3: "2rem", //Bruges til serif header h3
         serifh4: "1.375rem", //Bruges til serif header h4
