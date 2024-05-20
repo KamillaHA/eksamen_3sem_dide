@@ -40,8 +40,8 @@ module.exports = {
         gul900: "#584927", //farve til clicked primary button & dark border
       },
       fontFamily: {
-        serif: ["Playfair Disiplay"],
-        normal: ["Lato", "sans-serif"],
+        serif: ["Playfair Disiplay"], //Font til special
+        normal: ["Lato", "sans-serif"], //Font til brødtekst og mindre headere
       },
       fontSize: {
         //Desktop
@@ -74,10 +74,14 @@ module.exports = {
         xs: "12px", //X-small padding
         s: "20px", //Small padding
         m: "40px", //Medium padding
+        l: "60px",
+        xl: "100px",
+        xxl: "200px",
 
         //Mobil
         ms: "10px", //Small padding
         mm: "20px", //Medium padding
+        ml: "30px",
       },
       spacing: {
         //Desktop
@@ -86,6 +90,7 @@ module.exports = {
         l: "30px", //Large gap
         xl: "60px", //X-large gap
         xxl: "100px", //Xx-large gap
+        xxxl: "140px", //3-xlarge gap
 
         //Mobil
         ms: "5px", //Small gap MOBIL
@@ -100,6 +105,13 @@ module.exports = {
         l: "12px", //Large borderradius
         xl: "16px", //X-large borderradius
       },
+      boxShadow: {
+        skygge: "0 10px 30px rgba(77, 70, 69, 0.10)", //Skygge på cards
+      },
+      textUnderlineOffset: {
+        off: "12px", // Margin mellem tekst og guld-linje
+        big: "24xxlpx", //Margin mellem tekst og guld-linje header
+      },
       //   backgroundImage: {
       //     herounit: "url('/src/assets/images/herounit.svg')",
       //   },
@@ -108,3 +120,10 @@ module.exports = {
     // brug altid en gap på 100px = XXL spacing mellem sektioner Desktop, og 60 px på mobil
   },
 };
+
+// Eksempel på tekst-overskrift med grøn farve og guld underlinje
+/* <div
+class="text-serifh3 text-gron500 mb-2 underline decoration-solid decoration-2 underline-offset-off decoration-gul500 font-serif"
+>
+Othello Lagkage
+</div> */

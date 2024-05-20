@@ -1,0 +1,97 @@
+---
+import Button from "./Button.astro";
+---
+
+<form
+  class="w-full max-w-xl border-2 border-solid border-gul500 px-m md:px-l py-m"
+>
+  <h4 class="text-serifh4 text-gron500 text-center mb-m">
+    Bestil din kage her
+  </h4>
+  <p class="text-pbodysmall text-neu500 text-center mb-l">
+    Udfyld formularen for at bestille din kage, og vi vender tilbage til dig med
+    en bekræftelse på din bestilling
+  </p>
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full px-ms mb-6 md:mb-m border-b border-gul500">
+      <input
+        class="appearance-none block bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall"
+        type="text"
+        placeholder="Navn"
+        aria-label="Full Name"
+      />
+    </div>
+    <div class="w-full px-ms mb-6 md:mb-m border-b border-gul500">
+      <input
+        class="appearance-none block bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall"
+        type="text"
+        placeholder="Email"
+        aria-label="Email"
+      />
+    </div>
+    <div class="w-full md:w-1/4 px-ms mb-6 md:mb-m border-b border-gul500">
+      <input
+        class="appearance-none block bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall"
+        type="text"
+        placeholder="Dato"
+        aria-label="Date"
+      />
+    </div>
+
+    <div class="w-full md:w-1/4 px-ms mb-6 md:mb-m border-b border-gul500">
+      <input
+        class="appearance-none block bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall"
+        type="text"
+        placeholder="Antal"
+        aria-label="Number of slices"
+      />
+    </div>
+
+    <div class="w-full md:w-2/4 px-ms mb-6 md:mb-m border-b border-gul500">
+      <input
+        class="appearance-none block bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall"
+        type="text"
+        placeholder="Telefonnummer"
+        aria-label="Phonenumber"
+      />
+    </div>
+
+    <div class="w-full md:w-1/4 px-ms mb-6 md:mb-m border-b border-gul500">
+      <select
+        class="block appearance-none w-full border-none py-1 px-2 leading-tight focus:outline-none text-pbodysmall"
+        id="grid-state"
+      >
+        <option>Allergi</option>
+        <option>Ja</option>
+        <option>Nej</option>
+      </select>
+    </div>
+    <div class="w-full md:w-3/4 px-ms mb-6 md:mb-m border-b border-gul500">
+      <input
+        class="appearance-none block bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall"
+        type="text"
+        placeholder="Allergitype"
+        aria-label="Type of allergy"
+      />
+    </div>
+    <div class="w-full px-ms mb-6 md:mb-m border-b border-gul500">
+      <input
+        class="appearance-none block bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall"
+        type="text"
+        placeholder="Ønsket tekst på kage"
+        aria-label="Full text on cake"
+      />
+    </div>
+    <div class="w-full px-ms mb-6 md:mb-m border-b border-gul500">
+      <input
+        class="appearance-none block bg-transparent border-none w-full text-neu500 mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall"
+        type="text"
+        placeholder="Andre tilføjelser"
+        aria-label="Other additions"
+      />
+    </div>
+  </div>
+  <div class="grid text-center">
+    <a href="#"><Button variant="primary">Bestil kage</Button></a>
+  </div>
+</form>
