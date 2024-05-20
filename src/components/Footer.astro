@@ -1,6 +1,48 @@
 ---
+import { Image } from "astro:assets";
+import LogoDesktop from "../assets/images/logo-desktop.svg";
+import Facebook from "../assets/images/facebook.png";
+import Instagram from "../assets/images/instagram.png";
 ---
-<div>
-<p>Footer</p>
+<div class="bg-gron500 border-2 border-gul500 p-m m-l">
+    <div class="grid grid-cols-1 md:grid-cols-5 py-12 gap-8">
+        <div class="mb-l md:py-m">
+            <Image src={LogoDesktop} alt="Logo"/>
+        </div>
+        
+        <div class="mb-m md:py-m items-center">
+            <ul class="space-y-s text-center md:text-left">
+                <li class="text-hvid"><a href="">Kager</a></li>
+                <li class="text-hvid"><a href="">Besøg La Glace</a></li>
+                <li class="text-hvid"><a href="">Nyheder</a></li>
+            </ul>
+        </div>
+
+        <div class="mb-m md:py-m">
+            <ul class="space-y-s text-center md:text-left">
+                <li class="text-hvid"><a href="">Historien</a></li>
+                <li class="text-hvid"><a href="">Gaver</a></li>
+                <li class="text-hvid"><a href="">Foredrag og kurser</a></li>
+            </ul> 
+        </div>
+
+        <div class="space-y-s text-center md:text-left mb-m md:mr-m">
+            <p class="text-hvid">Telefon:<br>+45 33 14 46 46</p>
+            <p class="text-hvid">Email:<br>conditori@laglace.dk</p>
+            <p class="text-hvid">Adresse:<br>Conditori La Glace - Skoubogade 3 - 1158 København</p>
+        </div>
+
+        <div class="space-y-s text-center md:text-left">
+            <p class="text-hvid">Nyhedsbrev</p>
+            <p class="text-hvid">Tilmeld dig her</p>
+            <div class="border-b-2 border-gul500">
+            <input type="email" placeholder="Email adresse" class="bg-gron500 placeholder-hvid border-b-2 border-gron500 text-center md:text-left">
+            </div>
+
+            <div class="flex justify-center md:justify-start gap-s mt-4">
+            <Image src={Facebook} alt="Facebook logo"/>
+            <Image src={Instagram} alt="Instagram logo"/>
+            </div>
+        </div>
+    </div>
 </div>
-  
