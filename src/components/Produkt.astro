@@ -2,6 +2,9 @@
 import { Image } from "astro:assets";
 import Cardtest from "../assets/images/test-card.png";
 import Formular from "./Formular.astro";
+import othellokage1 from "../assets/images/produktside/othellokage1.webp"
+import othellokage2 from "../assets/images/produktside/othellokage2.webp"
+import othellokage3 from "../assets/images/produktside/othellokage3.webp"
 ---
 
 <section class="bg-beige md:py-xxl">
@@ -12,18 +15,18 @@ import Formular from "./Formular.astro";
       class="grid grid-cols-2 grid-rows-3 md:col-span-3 md:col-start-1 md:grid-cols-3 md:grid-rows-2 gap-m mx-mxl md:mx-none"
     >
       <Image
-        src={Cardtest}
-        alt="testbillede"
+        src={othellokage1}
+        alt="hele kagen"
         class="md:w-full h-full col-start-1 col-span-2 row-start-1 row-span-2 md:col-span-2"
       />
       <Image
-        src={Cardtest}
-        alt="testbillede"
+        src={othellokage2}
+        alt="kagen skåret i"
         class="md:w-full h-full col-start-1 md:col-start-3 row-start-3 md:row-start-1"
       />
       <Image
-        src={Cardtest}
-        alt="testbillede"
+        src={othellokage3}
+        alt="kagen oppefra"
         class="md:w-full h-full col-start-2 md:col-start-3 row-start-3 md:row-start-2"
       />
     </div>
