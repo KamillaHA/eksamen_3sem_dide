@@ -10,30 +10,22 @@ import Kaffe from "../assets/illustrationer/Kaffe.svg";
 ---
 
 <section class="relative">
-  <Image
-    src={Hero}
-    alt="Baggrundsbillede til produkter"
-    class="md:w-full md:h-full"
-  />
+  <Image src={Hero} alt="Baggrundsbillede til produkter" class="w-full h-60 object-cover md:w-full md:h-full"/>
 
-  <div
-    class="md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center"
-  >
-    <h1
-      class="text-mserifh1 md:text-serifh1 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
-    >
-      Historien bag La Glace
-</h1>
-    <h4
-      class="text-mnormalh4 md:text-normalh4 text-neu500 font-normal mx-mxxl md:mx-0"
-    >
-      Her giver vi et lille historisk indblik i livet <br/>hos La Glace’s kage- og
-      kulturbærere gennem tiden.
-    </h4>
+  <div class="absolute inset-0 bg-white bg-opacity-10 flex items-center justify-center">
+    
+    <div class="text-center">
+      <h1 class="text-mserifh1 md:text-serifh1 text-gron500 mx-l md:mx-0 md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"> Historien bag La Glace</h1>
+
+
+      <h4 class="hidden md:block text-mnormalh4 md:text-normalh4 text-neu500 font-normal mx-mxxl md:mx-0">
+        Her giver vi et lille historisk indblik i livet <br />hos La Glace’s kage- og kulturbærere gennem tiden.
+      </h4>
+    </div>
   </div>
 </section>
 
-<section class=" py-ms">
+<section class="py-ms">
   <div
     class="grid grid-cols-2 mx-mxl md:mx-xxxl my-mxl md:my-xxl gap-xxl items-center"
   >
@@ -53,11 +45,12 @@ import Kaffe from "../assets/illustrationer/Kaffe.svg";
     </p>
   </div>
 </section>
-<h2
-  class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-center mt-l"
->
-  Tidslinje
-</h2>
+
+<h2 class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-center mt-l">Tidslinje</h2>
+
+<h4 class="block md:hidden text-mnormalh4 md:text-normalh4 text-neu500 font-normal text-center mx-mxxl md:mx-0">
+  Her giver vi et lille historisk indblik i livet hos La Glace’s kage- og kulturbærere gennem tiden.
+</h4>
 
 <ol class="relative border-l-2 dark:border-gul500 mx-mxl md:mx-xxxl">
   <section class="grid grid-cols-2 grid-rows-5 md:mx-l my-mxl md:my-xxl gap-xl">
@@ -250,3 +243,47 @@ import Kaffe from "../assets/illustrationer/Kaffe.svg";
     </div>
   </section>
 </ol>
+
+
+
+
+
+<section class="relative">
+  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+    <h1 class="text-mserifh1 md:text-serifh1 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif">
+      Historien bag La Glace
+    </h1>
+    <h4 class="text-mnormalh4 md:text-normalh4 text-neu500 font-normal mx-mxxl md:mx-0">
+      Her giver vi et lille historisk indblik i livet <br />hos La Glace’s kage- og kulturbærere gennem tiden.
+    </h4>
+  </div>
+</section>
+
+<section class="py-ms">
+  <div class="grid grid-cols-1 md:grid-cols-2 mx-mxl md:mx-xxxl my-mxl md:my-xxl gap-xxl items-center">
+    <p class="text-neu500 text-pbody font-normal mt-4 md:mt-0">
+      Der er mange gode anekdoter forbundet med La Glace. <br /><br />
+      Prominente personligheder og andet godtfolk har i generationer bidraget med megen kolorit. Men det er i bund og grund Conditoriets håndhævelse af den faglige konditor-ekspertise der må have æren for, at vi stadig er at finde i Skoubogade.<br /><br />
+      Har De lyst til at læse om de mange ildsjæle, kage- og kulturbærere, der igennem tiden har lagt sjælen i konditoriet, så scroll videre.
+    </p>
+  </div>
+</section>
+
+<h2 class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-center mt-l">
+  Tidslinje
+</h2>
+
+<ol class="relative border-l-2 border-gron500 mx-mxl md:mx-xxxl">
+  <section class="timeline grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-xl">
+    <div class="timeline-item col-start-1 md:col-start-1">
+      <div class="timeline-marker"></div>
+      <h3 class="text-mserifh3 md:text-serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left -mt-4">
+        Første generation
+      </h3>
+      <p class="text-pbody text-neu500 font-normal">
+        Conditori La Glace blev grundlagt den 8. oktober 1870 i Skoubogade 3, og på denne adresse har konditoriet stadig til huse.<br /><br />
+        Nicolaus Henningsen blev født i 1839 i Slesvig og blev udlært konditor i 1859 efter en læretid i Flensborg. Han flyttede til København i 1860 og begyndte at samle opskrifter, som stadig anvendes i konditoriet i dag. I 1870 åbnede han sin forretning, "Henningsens Kælder", i København. <br /><br />
+        Efter hans tidlige død i 1876 overtog hans kone, Anina Henningsen, forretningen. Anina blev kendt for sin elegance og skønhed, og blev ofte set i silkekjoler fra de fineste butikker. Hun giftede sig igen i 1881 med Thorvald Schrøder, som videreudviklede forretningen og ændrede navnet til Conditori La Glace. Under Thorvalds ledelse blev forretningen moderniseret og udvidet, bl.a. med en ekstra butik og café indrettet i hvidt og guld. <br /><br />
+        Efter Thorvalds død i 1909 fortsatte Anina driften indtil 1915, hvorefter svigersønnen og datteren overtog. Anina Henningsen døde selv i 1925.<br /><br />
+      </p>
+    </div>
