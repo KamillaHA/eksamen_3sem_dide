@@ -4,33 +4,21 @@ import Button from "./Button.astro";
 import Karussel from "./Karussel.astro";
 import bryllupskage from "../assets/images/frontpage/bryllypskage.webp";
 import hero from "../assets/images/frontpage/hero_1.webp";
+import mobilhero from "../assets/images/frontpage/mobilhero.webp";
 import kransekage from "../assets/images/frontpage/kransekage.webp";
 import specielkage from "../assets/images/frontpage/specielkage.webp";
 import voreshistorie from "../assets/images/frontpage/vores historie.webp";
-import mobilhero from "../assets/images/frontpage/mobil hero.webp";
 import the from "../assets/illustrationer/the.svg";
 import kage from "../assets/illustrationer/Kage1.svg";
 import kage2 from "../assets/illustrationer/kage2.svg";
 import "../styles/global.css";
 ---
 
-<section
-  class="relative text-center mb-mxl md:mb-mxxl bg-[url('/src/assets/images/frontpage/mobilhero.webp')] w-full h-full"
->
-  <!-- <Image
-    src={hero}
-    alt="Baggrundsbillede til produkter"
-    class="md:w-full md:h-full md:block hidden"
-  />
-
-  <Image
-    src={mobilhero}
-    alt="Baggrundsbillede til produkter"
-    class="w-full h-full md:hidden block"
-  /> -->
+<section class="relative text-center mb-mxl md:mb-mxxl bg-fixed">
+  <Image src={hero} alt="Baggrundsbillede til forside" class="h-96 md:h-full" />
 
   <div
-    class="absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:mb-mxxl"
+    class="absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:mb-mxxl top-5"
   >
     <h1
       class="text-mserifh1 md:text-serifh1 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"

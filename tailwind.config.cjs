@@ -110,11 +110,9 @@ module.exports = {
       },
       textUnderlineOffset: {
         off: "12px", // Margin mellem tekst og guld-linje
-        big: "24xxlpx", //Margin mellem tekst og guld-linje header
+        big: "24px", //Margin mellem tekst og guld-linje header
       },
-      backgroundImage: {
-        mforside: "url('/src/assets/images/frontpage/mobilhero.webp')",
-      },
+      backgroundSize: {},
     },
 
     // brug altid en gap på 100px = XXL spacing mellem sektioner Desktop, og 60 px på mobil
