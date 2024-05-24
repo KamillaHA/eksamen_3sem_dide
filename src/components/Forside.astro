@@ -200,4 +200,23 @@ import "../styles/global.css";
       "animate__delay-0.5s"
     );
   });
+  document.addEventListener("DOMContentLoaded", () => {
+    const introAnimation = document.getElementById("intro-animation");
+    const textElement = document.querySelector(".handwritten-text");
+
+    // Get the duration of the typing animation
+    const typingAnimationDuration =
+      parseFloat(getComputedStyle(textElement).animationDuration) * 1000;
+
+    // Set a timeout to fade out the intro animation after the typing animation is done
+    setTimeout(() => {
+      introAnimation.style.transition = "opacity 1s";
+      introAnimation.style.opacity = "0";
+
+      // After fading out, hide the intro animation after an additional 2 seconds
+      setTimeout(() => {
+        introAnimation.style.display = "none";
+      }, 1000); // Match the duration of your fade-out transition + 2 seconds
+    }, typingAnimationDuration + 1000); // Add 2 seconds delay
+  });
 </script>
