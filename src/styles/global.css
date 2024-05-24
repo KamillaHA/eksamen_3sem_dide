@@ -20,9 +20,10 @@
   }
 }
 
-/* Anvendelse af Animista keyframes til h1 elementet */
+/* Delay the animation for the text-mserifh1 class */
 h1.text-mserifh1 {
   animation: scale-up-center 1s ease-in-out forwards;
+  animation-delay: 4s; /* Delay the animation by 4 seconds */
 }
 
 @-webkit-keyframes fade-in {
@@ -66,7 +67,7 @@ h1.text-mserifh1 {
   white-space: nowrap;
   overflow: hidden;
 
-  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+  animation: typing 2s steps(40, end);
 }
 
 /* The typing effect */
