@@ -18,6 +18,11 @@ import kage from "../assets/illustrationer/Kage1.svg"
 import kage2 from "../assets/illustrationer/kage2.svg"
 import "../styles/global.css";
 ---
+<section id="intro-animation" class="intro-animation">
+  <div class="text-container">
+    <h1 class="handwritten-text">Conditori La Glace</h1>
+  </div>
+</section>
 
 <section class="relative text-center mb-mxl md:mb-mxxl">
   
@@ -53,11 +58,11 @@ import "../styles/global.css";
 
 
 <section class="relative text-center my-mxl md:my-xxl">
-  <p
-    class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
+  <h2
+    class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif headline1"
   >
     Stort udvalg af kager
-  </p>
+</h2>
   <p
     class="text-pbody text-neu500 font-normal mx-mxxl md:mx-0 mb-mxl md:mb-none mt-none md:mt-m"
   >
@@ -71,16 +76,16 @@ import "../styles/global.css";
 </section>
 
 <section
-  class="relative bg-beige text-center py-ml md:py-xl md:grid md:grid-cols-6 md:grid-rows-2"
+  class="relative bg-beige text-center py-ml md:py-xl md:grid md:grid-cols-6 md:grid-rows-2 anledning"
 >
   <div
     class="md:col-start-1 md:col-span-3 md:row-start-1 md:pl-xxl pl-0 md:text-left"
   >
-    <p
-      class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
+    <h2
+      class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif headline2"
     >
       En særlig anledning?
-    </p>
+</h2>
     <p
       class="text-pbody text-neu500 font-normal mx-mxxl md:mx-0 mb-mxl md:mb-none mt-none md:mt-m"
     >
@@ -94,7 +99,7 @@ import "../styles/global.css";
        <Image
       src={kage2}
       alt="kage illustration"
-      class="md:w-full h-96 pr-40 "
+      class="md:w-full h-96 pr-40 kage2"
     />
   </div>
 
@@ -130,11 +135,11 @@ import "../styles/global.css";
     />
   </div>
   <div class="md:col-start-2 md:row-span-1 text-center md:text-left">
-    <p
-      class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
+    <h2
+      class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif headline3"
     >
       Vores historie
-    </p>
+  </h2>
     <p
       class="text-pbody text-neu500 font-normal mx-mxxl md:mx-0 mb-mxl md:mb-none mt-mxl md:mt-none"
     >
@@ -183,29 +188,45 @@ elementmedanimation2.classList.add("animate__animated", "animate__fadeInUp", "an
 
 }); 
 
-const bryllupskage = document.querySelector(".bryllupskage");
+const headline1 = document.querySelector(".headline1");
 
-inView(bryllupskage, () => {
+inView(headline1, () => {
 
-bryllupskage.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
-
-}); 
-
-const kransekage = document.querySelector(".kransekage");
-
-inView(kransekage, () => {
-
-kransekage.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
+headline1.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
 
 }); 
 
-const specielkage = document.querySelector(".specielkage");
+const headline2 = document.querySelector(".headline2");
 
-inView(specielkage, () => {
+inView(headline2, () => {
 
-specielkage.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
+headline2.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
 
 }); 
+
+const headline3 = document.querySelector(".headline3");
+
+inView(headline3, () => {
+
+headline3.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
+
+}); 
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const introAnimation = document.getElementById('intro-animation');
+    const duration = 4000; // Match the duration of your typing animation
+
+    setTimeout(() => {
+      introAnimation.style.transition = 'opacity 1s';
+      introAnimation.style.opacity = '0';
+
+      setTimeout(() => {
+        introAnimation.style.display = 'none';
+      }, 1000); // Match the duration of your fade-out transition
+    }, duration);
+  });
+
 
 
 </script>
