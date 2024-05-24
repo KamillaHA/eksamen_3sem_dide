@@ -200,6 +200,30 @@ import "../styles/global.css";
       "animate__delay-0.5s"
     );
   });
+
+  const headline1 = document.querySelector(".headline1");
+
+inView(headline1, () => {
+
+headline1.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
+
+}); 
+
+const headline2 = document.querySelector(".headline2");
+
+inView(headline2, () => {
+
+headline2.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
+
+}); 
+
+const headline3 = document.querySelector(".headline3");
+
+inView(headline3, () => {
+
+headline3.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
+
+}); 
   document.addEventListener("DOMContentLoaded", () => {
     const introAnimation = document.getElementById("intro-animation");
     const textElement = document.querySelector(".handwritten-text");
