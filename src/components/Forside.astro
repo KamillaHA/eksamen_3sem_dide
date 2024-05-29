@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Button from "./Button.astro";
-import Karussel from "./Karussel.astro";
+import Karussel from "./Karussel.astro"; // Importér din Karussel.astro-komponent her
 import bryllupskage from "../assets/images/frontpage/bryllypskage.webp";
 import hero from "../assets/images/frontpage/hero_1.webp";
 import kransekage from "../assets/images/frontpage/kransekage.webp";
@@ -78,17 +78,16 @@ import "../styles/global.css";
     </p>
     <a href="/liste/"><Button variant="secondary">Få inspiration</Button></a>
   </div>
-  <div class="md:col-start-4 md:col-span-3 md:row-start-1">
-    <!-- Indsæt illustration -->
+  <div class="md:col-start-4 md:col-span-3 md:row-start-1 flex justify-center items-center">
     <Image
       src={kage2}
       alt="Illustration af et stykke kage med kirsebær på toppen"
-      class="md:w-full h-96 pr-40 kage2"
+      class="w-full h-40 md:h-80 pt-m kage2"
     />
   </div>
 
   <div
-    class="mx-mxl mt-mxl md:-mt-14 md:col-span-6 md:row-start-2 md:grid md:grid-cols-3 md:gap-xl md:mx-xxl"
+    class="mx-mxl mt-mxl md:-mt-14 md:col-span-6 md:row-start-2 md:grid md:grid-cols-3 md:gap-xl md:mx-xxl md:pt-xl"
   >
     <Image
       src={bryllupskage}
@@ -233,19 +232,19 @@ import "../styles/global.css";
     const introAnimation = document.getElementById("intro-animation");
     const textElement = document.querySelector(".handwritten-text");
 
-    // Get the duration of the typing animation
+  
     const typingAnimationDuration =
       parseFloat(getComputedStyle(textElement).animationDuration) * 1000;
 
-    // Set a timeout to fade out the intro animation after the typing animation is done
+
     setTimeout(() => {
       introAnimation.style.transition = "opacity 1s";
       introAnimation.style.opacity = "0";
 
-      // After fading out, hide the intro animation after an additional 2 seconds
+      
       setTimeout(() => {
         introAnimation.style.display = "none";
-      }, 1000); // Match the duration of your fade-out transition + 2 seconds
-    }, typingAnimationDuration + 1000); // Add 2 seconds delay
+      }, 1000); 
+    }, typingAnimationDuration + 1000); 
   });
 </script>
