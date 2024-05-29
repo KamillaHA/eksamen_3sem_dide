@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import "../styles/tailwind.css";
 import Første from "../assets/images/om/1_generation.webp";
 import Anden from "../assets/images/om/2_generation.webp";
 import Tredje from "../assets/images/om/3_generation.webp";
@@ -16,7 +17,7 @@ import Kaffe from "../assets/illustrationer/Kaffe.svg";
   <div class="absolute inset-0 bg-white bg-opacity-10 flex items-center justify-center">
     
     <div class="text-center">
-      <h1 class="text-mserifh1 md:text-serifh1 text-gron500 mx-l md:mx-0 md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif scale"> Historien bag La Glace</h1>
+      <h1 class="text-mserifh1 md:text-serifh1 text-gron500 mx-l md:mx-0 md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif zoom1"> Historien bag La Glace</h1>
 
 
       <h4 class="hidden md:block text-mnormalh4 md:text-normalh4 text-neu500 font-normal mx-mxxl md:mx-0">
@@ -42,167 +43,111 @@ import Kaffe from "../assets/illustrationer/Kaffe.svg";
 </h4>
 
 <!-- Sektion 2 - Tidslinje -->
-
 <ol class="relative border-l-2 dark:border-gul500 mx-mxl md:mx-xxxl">
   <section class="grid grid-cols-1 md:grid-cols-2 gap-l md:gap-xxl mx-l md:mx-l my-mxl md:my-xl">
-    <section class="mx-auto max-w-4xl scrollzoom overflow-clip"></section> 
+    <section class="mx-auto max-w-4xl overflow-clip"></section> 
 
     <!-- Første genereation -->
-    <div class="md:col-start-1">
+    <div class="md:col-start-1 zoom1">
 
-      <div class="absolute w-3.5 h-3.5 rounded-full mt-0 -start-2 dark:border-gron500 dark:bg-gron500"></div>
+      <div class="absolute w-3.5 h-3.5 rounded-full mt-0 -ml-l -start-2 dark:border-gron500 dark:bg-gron500"></div>
 
-      <div class="scrollzoomimg">
       <h3 class="text-mserifh3 md:text-serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left -mt-4">Første generation</h3>
 
       <p class="text-pbody text-neu500 font-normal mb-m md:mb-0">
         Conditori La Glace blev grundlagt den 8. oktober 1870 i Skoubogade 3, og på denne adresse har konditoriet stadig til huse.<br /><br /> Nicolaus Henningsen blev født i 1839 i Slesvig og blev udlært konditor i 1859 efter en læretid i Flensborg. Han flyttede til København i 1860 og begyndte at samle opskrifter, som stadig anvendes i konditoriet i dag. I 1870 åbnede han sin forretning, "Henningsens Kælder", i København. <br /><br /> Efter hans tidlige død i 1876 overtog hans kone, Anina Henningsen, forretningen. Anina blev kendt for sin elegance og skønhed, og blev ofte set i silkekjoler fra de fineste butikker. Hun giftede sig igen i 1881 med Thorvald Schrøder, som videreudviklede forretningen og ændrede navnet til Conditori La Glace. Under Thorvalds ledelse blev forretningen moderniseret og udvidet, bl.a. med en ekstra butik og café indrettet i hvidt og guld. <br /><br /> Efter Thorvalds død i 1909 fortsatte Anina driften indtil 1915, hvorefter svigersønnen og datteren overtog. Anina Henningsen døde selv i 1925.</p>
-    </div></div>
+      </div>
 
-      <div class="md:col-start-2 md:my-l">
-      <Image src={Første} alt="Illustration af kop kaffe" class="w-full md:h-full md:p-s scrollzoomimg"/>
+      <div class="md:col-start-2 md:my-l zoom1">
+      <Image src={Første} alt="Illustration af kop kaffe" class="w-full md:h-full md:p-s"/>
     </div>
 
     <div class="border-b-2 border-gul500 p-xs block lg:hidden"></div>
 
 
      <!-- Anden genereation -->
-    <div class="md:col-start-1">
+    <div class="md:col-start-1 zoom1">
 
-      <div class="absolute w-3.5 h-3.5 rounded-full mt-4 -start-2 dark:border-gron500 dark:bg-gron500"></div>
+      <div class="absolute w-3.5 h-3.5 rounded-full mt-4 -ml-l -start-2 dark:border-gron500 dark:bg-gron500"></div>
 
-      <div class="scrollzoomimg">
       <h3 class="text-mserifh3 md:text-serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left">Anden generation</h3>
 
       <p class="text-pbody text-neu500 font-normal mb-m md:mb-0">
         Nicolaus Henningsen var en rigtig livsnyder. Han forstod at forene arbejdslivet med festlivet. Han var en stor musikelsker og komponerede selv marcher til Den Kongelige Livgarde. Således har Garden både spillet Konditormarchen og Marianemarchen gennem Københavns gader. <br /><br /> Mariane Henningsen var ligeledes meget kunstnerisk. Hun holdt af at digte og skrive sange. Det var således også hende der i Neuruppiner stil skrev sang til en fest i et kunstnerhjem. Sangen gjorde lykke og blev et slags motto for Conditori La Glace Kager, Kunst og Kærlighed Kvæler al Besværlighed. <br /><br /> I 1943 døde Nicolaus Henningsen, men også i denne generation fortsatte enken driften. Det varede dog kun et år før også Mariane døde. Ingen af de to oplevede at se slutningen på besættelsestidens restriktioner og vanskeligheder med at gennemføre en konditorvirksomhed med traditioner for høj kvalitet.</p>
-    </div></div>
+    </div>
 
-    <div class="md:col-start-2 md:my-l">
-      <Image src={Anden} alt="Anden generation" class="w-full md:h-full md:p-s scrollzoomimg"/>
+    <div class="md:col-start-2 md:my-l zoom1">
+      <Image src={Anden} alt="Anden generation" class="w-full md:h-full md:p-s"/>
     </div>
 
     <div class="border-b-2 border-gul500 p-xs block lg:hidden"></div>
 
      <!-- Tredje genereation -->
-    <div class="md:col-start-1">
+    <div class="md:col-start-1 zoom1">
 
-      <div class="absolute w-3.5 h-3.5 rounded-full mt-4 -start-2 dark:border-gron500 dark:bg-gron500"></div>
+      <div class="absolute w-3.5 h-3.5 rounded-full mt-4 -ml-l -start-2 dark:border-gron500 dark:bg-gron500"></div>
 
-      <div class="scrollzoomimg">
       <h3 class="text-mserifh3 md:text-serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left">Tredje generation</h3>
 
       <p class="text-pbody text-neu500 font-normal mb-m md:mb-0">
         Efter Mariane Henningsens død forsatte sønnen Erik Henningsen og datteren Rigmor Henningsen, Conditori La Glace's drift. I 1963 døde Erik Henningsen og efterlod sig ingen børn. Rigmor Henningsen døde i 2004, men fik i sine 3 ægteskaber ingen arvinger. <br /><br /> Rigmor Henningsen valgte i en alder af 65 år at sælge forretningen. Køberen var Aage Larsen, der var udlært konditor og tidligere havde ejet Marstrand i Købmagergade. <br /><br /> Aage Larsen gik grundigt til værks. Conditori La Glace var i visse vanskeligheder, så det var nødvendigt med rationaliseringer og forbedringer. Han var meget effektiv i sin iver for igen at gøre La Glace til en god forretning. Chokoladeproduktionen blev nedlagt, og der blev skåret grundigt ned i personalestaben. Nogle ændringer var stærkt påkrævet, andre meget overflødige. 6 år senere opgav Aage Larsen at drive konditori, og forretningen blev sat til salg med henblik på at blive endeligt nedlagt. </p>
-    </div></div>
+    </div>
     
-    <div class="md:col-start-2 md:my-l">
-      <Image src={Tredje} alt="Tredje generation" class="w-full md:h-full md:p-s scrollzoomimg"/>
+    <div class="md:col-start-2 md:my-l zoom1">
+      <Image src={Tredje} alt="Tredje generation" class="w-full md:h-full md:p-s"/>
     </div>
 
     <div class="border-b-2 border-gul500 p-xs block lg:hidden"></div>
 
      <!-- Fjerde genereation -->
-    <div class="md:col-start-1">
+    <div class="md:col-start-1 zoom1">
 
-      <div class="absolute w-3.5 h-3.5 rounded-full mt-4 -start-2 dark:border-gron500 dark:bg-gron500"></div>
+      <div class="absolute w-3.5 h-3.5 rounded-full mt-4 -ml-l -start-2 dark:border-gron500 dark:bg-gron500"></div>
 
-      <div class="scrollzoomimg">
       <h3 class="text-mserifh3 md:text-serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left">Fjerde generation</h3>
 
       <p class="text-pbody text-neu500 font-normal mb-m md:mb-0">
         I 1978 solgte Aage Larsen Conditori La Glace til advokat Merethe Stagetorn. Det var hendes mand Advokat Ove Stagetorn, der gennem noget tid havde forhandlet med en udenlandsk klient om at købe ejendommen. Klienten var dog ikke interesseret i at lægge et stort beløb i goodwill for derefter at nedlægge konditoriet. Forhandlingerne strandede, men Ove Stagetorn kunne se hvilken god forretning der var tale om og hvilken loyal medarbejderstab, der fulgte. Larsen var afvisende overfor tanken om salg til ikke-fagfolk. Først efter et lille års forløb faldt alle brikker på plads. <br /><br /> Merethe Stagetorn havde ingen erfaring med at drive konditori, men takket være mange trofaste medarbejdere ledet af chefkonditor Ebbe Jepsen, der havde været i La Glace i en årrække, blev forretningen drevet videre i samme ånd. Merethe Stage- torn engagerede sig dybt i alle konditoriets traditioner og var levende interesseret i alt hvad konditorverdenen bragte hende af viden. For første gang i historien var ægtefællen ikke inddraget i det daglige virke i Conditori La Glace.</p>
-    </div></div>
+    </div>
 
-    <div class="md:col-start-2 md:my-l">
-      <Image src={Fjerde} alt="Fjerde generation" class="w-full md:h-full md:p-s scrollzoomimg"/>
+    <div class="md:col-start-2 md:my-l zoom1">
+      <Image src={Fjerde} alt="Fjerde generation" class="w-full md:h-full md:p-s"/>
     </div>
 
     <div class="border-b-2 border-gul500 p-xs block lg:hidden"></div>
 
      <!-- Femte genereation -->
-    <div class="md:col-start-1">
-      <div class="absolute w-3.5 h-3.5 rounded-full mt-4 -start-2 dark:border-gron500 dark:bg-gron500"></div>
+    <div class="md:col-start-1 zoom1">
+      <div class="absolute w-3.5 h-3.5 rounded-full mt-4 -ml-l -start-2 dark:border-gron500 dark:bg-gron500"></div>
 
-      <div class="scrollzoomimg">
       <h3 class="text-mserifh3 md:text-serifh3 text-gron500 mb-m md:mb-l underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif text-left">Femte generation</h3>
 
       <p class="text-pbody text-neu500 font-normal mb-m md:mb-0">
         Efter 11 år som indehaver solgte Merethe Stagetorn Conditori La Glace til sin datter Marianne Stagetorn den 1. juli 1989. Marianne Stagetorn var på det tidspunkt 22 år og i gang med at uddanne sig til handelsakademiøkonom i detail handel og blev færdig hermed i 1990. Hurtigt indså hun, at dette var et livsjob og påbegyndte derfor allerede i 1990 konditoruddannelse i La Glace og afsluttede med svendeprøve i februar 1993 med udmærkelsen ros. <br /><br /> I 1991 giftede Marianne sig med Peter Kolos. Hendes mand driver eget firma og er derfor ikke involveret i den daglige drift af Conditori La Glace. Siden er 3 potentielle indehavere kommet til verden, Maria født 1995, Andreas født 1996 og Laura født 1998.</p>
-    </div></div>
+    </div>
 
-    <div class="md:col-start-2 md:my-l">
-      <Image src={Femte} alt="Femte generation" class="w-full md:h-full md:p-s scrollzoomimg"/>
+    <div class="md:col-start-2 md:my-l zoom1">
+      <Image src={Femte} alt="Femte generation" class="w-full md:h-full md:p-s"/>
     </div>
   </section>
 </ol>
 
 <!-- Animationer -->
 
-<style>
-  /* Animtation til overskrift */
-  .scale{-webkit-animation:scale .8s cubic-bezier(.25,.46,.45,.94) both;animation:scale .8s cubic-bezier(.25,.46,.45,.94) both}
-
-  /* ----------------------------------------------
- * Generated by Animista on 2024-5-28 0:41:2
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-@-webkit-keyframes scale{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes scale{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}
-</style>
-
 <script>
 	import { animate, stagger, inView, scroll, timeline } from "motion";
 
   // Animation til sektion 1
   const fade1 = document.querySelector(".fade1");
-
   inView(fade1, () => {
+    fade1.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
+  });
 
-  fade1.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
-}); 
-
-
-// Animation til sektion 2 (Tidslinje)
-
-    const scrollZoomElements = document.querySelectorAll('.scrollzoomimg');
-
-    const observerOptions = {
-      root: null,
-      rootMargin: '-50% 0% -50% 0%',
-      threshold: 0
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.transition = "transform 1s ease-out";
-          entry.target.style.transform = "scale(1)";
-        } else {
-          entry.target.style.transition = "transform 1s ease-out";
-          entry.target.style.transform = "scale(0.9)";
-        }
-      });
-    }, observerOptions);
-
-    scrollZoomElements.forEach(element => {
-      observer.observe(element);
+  // Animation til sektion 2 (Tidslinje)
+  document.querySelectorAll('.zoom1').forEach(section => {
+    inView(section, () => {
+      
+      animate(section, { opacity: [0, 1], transform: ['scale(0.5)', 'scale(1)'] }, { duration: 1, easing: "ease-in-out" });
     });
-
-
-    // const scrollZoomElements = document.querySelectorAll('.scrollzoomimg');
-
-// 	inView( ".scrollzoomimg" , () =>{
-//     scroll(
-//         animate(".scrollzoomimg", { 
-//           scale: [1, 0.9]    
-//         }),
-//         { 
-//           target: document.querySelector(".scrollzoom"),
-//           offset: ["0.5 0.5", "1 1"]
-//        }
-//       )
-// })
+  });
 </script>
