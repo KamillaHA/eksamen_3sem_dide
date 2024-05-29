@@ -26,7 +26,7 @@ import "../styles/global.css";
     class="absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:mb-mxxl top-5"
   >
     <h1
-      class="text-mserifh1 md:text-serifh1 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
+      class="text-mserifh1 md:text-serifh1 text-gron500 mb-m md:mb-2 font-serif"
     >
       Velkommen til Conditori La Glace
     </h1>
@@ -73,12 +73,14 @@ import "../styles/global.css";
     <p
       class="text-pbody text-neu500 font-normal mx-mxxl md:mx-0 mb-mxl md:mb-none mt-none md:mt-m"
     >
-      Kontakt os for at få mere information om vores speciel-lavede kager, eller
+      Kontakt os for at få mere information om vores special-lavede kager, eller
       kig i vores sortiment for inspiration.
     </p>
     <a href="/liste/"><Button variant="secondary">Få inspiration</Button></a>
   </div>
-  <div class="md:col-start-4 md:col-span-3 md:row-start-1 flex justify-center items-center">
+  <div
+    class="md:col-start-4 md:col-span-3 md:row-start-1 flex justify-center items-center"
+  >
     <Image
       src={kage2}
       alt="Illustration af et stykke kage med kirsebær på toppen"
@@ -102,7 +104,7 @@ import "../styles/global.css";
     <Image
       src={kransekage}
       alt="Kransekage med flag og petit four omkring"
-      class="md:w-full h-full my-mxl md:my-0 kransekage"
+      class="md:w-full h-full mt-mxl my-0 md:mt-0 md:my-0 kransekage"
     />
   </div>
 </section>
@@ -119,7 +121,7 @@ import "../styles/global.css";
   </div>
   <div class="md:col-start-2 md:row-span-1 text-center md:text-left">
     <h2
-      class="text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif headline3"
+      class="mt-l md:mt-0 text-mserifh2 md:text-serifh2 text-gron500 mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif headline3"
     >
       Vores historie
     </h2>
@@ -232,19 +234,16 @@ import "../styles/global.css";
     const introAnimation = document.getElementById("intro-animation");
     const textElement = document.querySelector(".handwritten-text");
 
-  
     const typingAnimationDuration =
       parseFloat(getComputedStyle(textElement).animationDuration) * 1000;
-
 
     setTimeout(() => {
       introAnimation.style.transition = "opacity 1s";
       introAnimation.style.opacity = "0";
 
-      
       setTimeout(() => {
         introAnimation.style.display = "none";
-      }, 1000); 
-    }, typingAnimationDuration + 1000); 
+      }, 1000);
+    }, typingAnimationDuration + 1000);
   });
 </script>
