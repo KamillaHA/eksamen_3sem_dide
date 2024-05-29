@@ -23,7 +23,7 @@
 /* Delay the animation for the text-mserifh1 class */
 h1.text-mserifh1 {
   animation: scale-up-center 1s ease-in-out forwards;
-  animation-delay: 4s; /* Delay the animation by 4 seconds */
+  animation-delay: 3s; /* Delay the animation by 4 seconds */
 }
 
 @-webkit-keyframes fade-in {
