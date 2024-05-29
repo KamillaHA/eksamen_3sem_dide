@@ -27,10 +27,6 @@
   }
 }
 
-h1.text-mserifh1delay {
-  animation: scale-up-center 1s ease-in-out forwards;
-}
-
 h1.text-mserifh1 {
   animation: scale-up-center 1s ease-in-out forwards;
 }
