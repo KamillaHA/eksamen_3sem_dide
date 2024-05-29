@@ -79,3 +79,28 @@ h1.text-mserifh1 {
     width: 100%;
   }
 }
+
+/* Karrusel */
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-content {
+  display: flex;
+  animation: slide 30s linear infinite;
+}
+
+.carousel-slide {
+  flex: 0 0 auto;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
