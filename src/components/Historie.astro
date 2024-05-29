@@ -301,41 +301,41 @@ import Kaffe from "../assets/illustrationer/Kaffe.svg";
 <script>
   import { animate, stagger, inView, scroll, timeline } from "motion";
 
-  const scrollZoomElements = document.querySelectorAll(".scrollzoomimg");
-
-  inView(".scrollzoomimg", () => {
-    scroll(
-      animate(".scrollzoomimg", {
-        scale: [1, 0.9],
-      }),
-      {
-        target: document.querySelector(".scrollzoom"),
-        offset: ["0.5 0.5", "1 1"],
-      }
-    );
-  });
-
   // const scrollZoomElements = document.querySelectorAll('.scrollzoomimg');
 
-  // const observerOptions = {
-  //   root: null,
-  //   rootMargin: '-50% 0% -50% 0%',
-  //   threshold: 0
-  // };
+  // 	inView( ".scrollzoomimg" , () =>{
+  //     scroll(
+  //         animate(".scrollzoomimg", {
+  //           scale: [1, 0.9]
+  //         }),
+  //         {
+  //           target: document.querySelector(".scrollzoom"),
+  //           offset: ["0.5 0.5", "1 1"]
+  //        }
+  //       )
+  // })
 
-  // const observer = new IntersectionObserver((entries) => {
-  //   entries.forEach(entry => {
-  //     if (entry.isIntersecting) {
-  //       entry.target.style.transition = "transform 1s ease-out";
-  //       entry.target.style.transform = "scale(1)";
-  //     } else {
-  //       entry.target.style.transition = "transform 1s ease-out";
-  //       entry.target.style.transform = "scale(0.9)";
-  //     }
-  //   });
-  // }, observerOptions);
+  const scrollZoomElements = document.querySelectorAll(".scrollzoomimg");
 
-  // scrollZoomElements.forEach(element => {
-  //   observer.observe(element);
-  // });
+  const observerOptions = {
+    root: null,
+    rootMargin: "-50% 0% -50% 0%",
+    threshold: 0,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.transition = "transform 1s ease-out";
+        entry.target.style.transform = "scale(1)";
+      } else {
+        entry.target.style.transition = "transform 1s ease-out";
+        entry.target.style.transform = "scale(0.9)";
+      }
+    });
+  }, observerOptions);
+
+  scrollZoomElements.forEach((element) => {
+    observer.observe(element);
+  });
 </script>
