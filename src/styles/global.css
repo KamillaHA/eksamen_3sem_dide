@@ -29,7 +29,6 @@
 
 h1.text-mserifh1delay {
   animation: scale-up-center 1s ease-in-out forwards;
-  animation-delay: 3s;
 }
 
 h1.text-mserifh1 {
