@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import Button from "./Button.astro";
-import type { Code } from "astro:components";
 import Kaffe from "../assets/illustrationer/Kaffe.svg";
 import Kage2 from "../assets/illustrationer/Kage2.svg";
 import bryllupskager from "../assets/images/sortiment/bryllupskager.webp";
@@ -22,7 +21,11 @@ import "../styles/global.css";
     class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center w-full max-w-screen-xl px-4"
   >
     <div class="flex justify-center">
-      <Image src={Kage2} alt="kage" class="inline w-24 md:w-80 my-2 md:h-40 animate__animated animate__slideInDown" />
+      <Image
+        src={Kage2}
+        alt="Illustration af et kagestykke med kirsebær på toppen"
+        class="inline w-24 md:w-80 my-2 md:h-40 animate__animated animate__slideInDown"
+      />
     </div>
     <div class="text-center">
       <h1
@@ -36,7 +39,11 @@ import "../styles/global.css";
       </p>
     </div>
     <div class="flex justify-center">
-      <Image src={Kaffe} alt="kaffe" class="inline w-24 md:w-80 md:h-40 my-2 animate__animated animate__slideInDown" />
+      <Image
+        src={Kaffe}
+        alt="Illustration af en kop kaffe"
+        class="inline w-24 md:w-80 md:h-40 my-2 animate__animated animate__slideInDown"
+      />
     </div>
   </div>
 </section>
@@ -46,7 +53,11 @@ import "../styles/global.css";
     <div
       class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-1"
     >
-      <Image src={lagkager} alt="lagkage" class="h-80 w-80 object-cover  " />
+      <Image
+        src={lagkager}
+        alt="Billede af en lagkage"
+        class="h-80 w-80 object-cover"
+      />
     </div>
     <div
       class="md:w-1/2 md:pl-8 md:order-2 text-center md:text-left md:mr-xxl mr-0"
@@ -78,7 +89,7 @@ import "../styles/global.css";
     >
       <Image
         src={konditorkager}
-        alt="konditorkgae"
+        alt="Billede af små konditorkager"
         class="h-80 w-80 object-cover"
       />
     </div>
@@ -109,7 +120,11 @@ import "../styles/global.css";
     <div
       class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-1"
     >
-      <Image src={visitkager} alt="visitkager" class="h-80 w-80 object-cover" />
+      <Image
+        src={visitkager}
+        alt="BIllede af flere visitkager"
+        class="h-80 w-80 object-cover"
+      />
     </div>
     <div
       class="md:w-1/2 md:pl-8 md:order-2 text-center md:text-left md:mr-xxl mr-0"
@@ -142,7 +157,7 @@ import "../styles/global.css";
     >
       <Image
         src={bryllupskager}
-        alt="bryllupskager"
+        alt="Billede af en bryllupskage"
         class="h-80 w-80 object-cover"
       />
     </div>
@@ -174,18 +189,22 @@ import "../styles/global.css";
     <div
       class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-1"
     >
-      <Image src={festkager} alt="festkager" class="h-80 w-80 object-cover" />
+      <Image
+        src={festkager}
+        alt="Billede af en festkage"
+        class="h-80 w-80 object-cover"
+      />
     </div>
     <div
       class="md:w-1/2 md:pl-8 md:order-2 text-center md:text-left md:mr-xxl mr-0"
     >
-    <div class="øvelse">
-      <h2
-        class="md:text-serifh2 text-mserifh2 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif"
-      >
-        Festkager
-      </h2>
-    </div>
+      <div class="øvelse">
+        <h2
+          class="md:text-serifh2 text-mserifh2 text-gron500 mb-4 md:mb-8 underline decoration-solid decoration-2 underline-offset-4 md:underline-offset-8 decoration-gul500 font-serif"
+        >
+          Festkager
+        </h2>
+      </div>
       <p class="text-pbody text-neu500 mb-6 text-center md:text-left">
         La Glace laver kager, der fornøjer både øje og gane. Og dét til alle
         aldre.
@@ -209,7 +228,7 @@ import "../styles/global.css";
     >
       <Image
         src={kransekager}
-        alt="kransekager"
+        alt="Billede af et kransekagetårn"
         class="h-80 w-80 object-cover"
       />
     </div>
@@ -241,7 +260,7 @@ import "../styles/global.css";
     <div class="md:w-1/2 flex justify-center mb-6 md:mb-0 md:order-1">
       <Image
         src={desmåfornøjelser}
-        alt="de små fornøjelser"
+        alt="Billede af forskellige små fornøjelser"
         class="h-80 w-80 object-cover mx-auto md:mx-0"
       />
     </div>
@@ -272,7 +291,7 @@ import "../styles/global.css";
     <div class="md:w-1/2 flex justify-center mb-6 md:mb-0 md:order-2">
       <Image
         src={isanretninger}
-        alt="bryllupskager"
+        alt="Billede af en isanretning"
         class="h-80 w-80 object-cover mx-auto md:mx-0"
       />
     </div>
@@ -297,43 +316,45 @@ import "../styles/global.css";
 </section>
 
 <script>
+  import { inView } from "motion";
 
-import { inView } from "motion";
+  const billedefadein1 = document.querySelector(".billedefadein1");
 
- 
+  inView(billedefadein1, () => {
+    billedefadein1.classList.add(
+      "animate__animated",
+      "animate__fadeInLeft",
+      "animate__delay-0.5s"
+    );
+  });
 
-const billedefadein1 = document.querySelector(".billedefadein1");
+  const billedefadein2 = document.querySelector(".billedefadein2");
 
-inView(billedefadein1, () => {
+  inView(billedefadein2, () => {
+    billedefadein2.classList.add(
+      "animate__animated",
+      "animate__fadeInUp",
+      "animate__delay-0.5s"
+    );
+  });
 
-billedefadein1.classList.add("animate__animated", "animate__fadeInLeft", "animate__delay-0.5s");
+  const billedefadein3 = document.querySelector(".billedefadein3");
 
-}); 
+  inView(billedefadein3, () => {
+    billedefadein3.classList.add(
+      "animate__animated",
+      "animate__fadeInRight",
+      "animate__delay-0.5s"
+    );
+  });
 
- 
+  const bogbillede = document.querySelector(".bogbillede");
 
-const billedefadein2 = document.querySelector(".billedefadein2");
-
-inView(billedefadein2, () => {
-
-billedefadein2.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
-
-}); 
-
-const billedefadein3 = document.querySelector(".billedefadein3");
-
-inView(billedefadein3, () => {
-
-billedefadein3.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-0.5s");
-
-}); 
-
-const bogbillede = document.querySelector(".bogbillede");
-
-inView(bogbillede, () => {
-
-bogbillede.classList.add("animate__animated", "animate__headShake", "animate__infinite" );
-
-}); 
-
+  inView(bogbillede, () => {
+    bogbillede.classList.add(
+      "animate__animated",
+      "animate__headShake",
+      "animate__infinite"
+    );
+  });
 </script>

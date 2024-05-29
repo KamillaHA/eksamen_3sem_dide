@@ -4,7 +4,6 @@ import Button from "./Button.astro";
 import Karussel from "./Karussel.astro";
 import bryllupskage from "../assets/images/frontpage/bryllypskage.webp";
 import hero from "../assets/images/frontpage/hero_1.webp";
-import mobilhero from "../assets/images/frontpage/mobilhero.webp";
 import kransekage from "../assets/images/frontpage/kransekage.webp";
 import specielkage from "../assets/images/frontpage/specielkage.webp";
 import voreshistorie from "../assets/images/frontpage/vores historie.webp";
@@ -83,7 +82,7 @@ import "../styles/global.css";
     <!-- Indsæt illustration -->
     <Image
       src={kage2}
-      alt="kage illustration"
+      alt="Illustration af et stykke kage med kirsebær på toppen"
       class="md:w-full h-96 pr-40 kage2"
     />
   </div>
@@ -93,17 +92,17 @@ import "../styles/global.css";
   >
     <Image
       src={bryllupskage}
-      alt="bryllupskage"
+      alt="Bryllupskage med lyserøde roser"
       class="md:w-full h-full my-mxl md:my-0 bryllupskage"
     />
     <Image
       src={specielkage}
-      alt="specielkage"
+      alt="Specialkage med navn og illustration af en stork"
       class="md:w-full h-full my-mxl md:my-0 specielkage"
     />
     <Image
       src={kransekage}
-      alt="Kransekage"
+      alt="Kransekage med flag og petit four omkring"
       class="md:w-full h-full my-mxl md:my-0 kransekage"
     />
   </div>
@@ -115,7 +114,7 @@ import "../styles/global.css";
   <div class="gap-m mx-mxl md:mx-xxl md:col-start-1 md:row-span-2">
     <Image
       src={voreshistorie}
-      alt="vores historie"
+      alt="De nyeste La Glace generationer"
       class="md:w-full h-full col-start-1 col-span-3 row-start-1"
     />
   </div>
@@ -136,12 +135,12 @@ import "../styles/global.css";
     <div class="grid grid-cols-2 illustrationer">
       <Image
         src={kage}
-        alt="vores historie"
+        alt="Illustration af et tærtestykke"
         class="col-start-1 h-20 mt-28 ml-10 md:w-full md:h-40 md:mt-40 md:ml-20 animate-slide-top kage"
       />
       <Image
         src={the}
-        alt="vores historie"
+        alt="Illustration af en gammel kande"
         class="col-start-2 md:w-full md:h-80 md:pt-0 md:pr-0 h-25 pt-14 pr-20 kaffe"
       />
     </div>
@@ -203,27 +202,33 @@ import "../styles/global.css";
 
   const headline1 = document.querySelector(".headline1");
 
-inView(headline1, () => {
+  inView(headline1, () => {
+    headline1.classList.add(
+      "animate__animated",
+      "animate__fadeInUp",
+      "animate__delay-0.5s"
+    );
+  });
 
-headline1.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
+  const headline2 = document.querySelector(".headline2");
 
-}); 
+  inView(headline2, () => {
+    headline2.classList.add(
+      "animate__animated",
+      "animate__fadeInUp",
+      "animate__delay-0.5s"
+    );
+  });
 
-const headline2 = document.querySelector(".headline2");
+  const headline3 = document.querySelector(".headline3");
 
-inView(headline2, () => {
-
-headline2.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
-
-}); 
-
-const headline3 = document.querySelector(".headline3");
-
-inView(headline3, () => {
-
-headline3.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0.5s");
-
-}); 
+  inView(headline3, () => {
+    headline3.classList.add(
+      "animate__animated",
+      "animate__fadeInUp",
+      "animate__delay-0.5s"
+    );
+  });
   document.addEventListener("DOMContentLoaded", () => {
     const introAnimation = document.getElementById("intro-animation");
     const textElement = document.querySelector(".handwritten-text");
